@@ -1,3 +1,13 @@
 <?php
-$con=mysqli_connect("localhost","root","","epark") OR die('Network connection error. Check connection then reload');
+
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="epark";
+		$con=new mysqli($servername,$username,$password,$dbname);
+		if($con->connect_error)
+		{
+			die("connection failed" .$conn->connect_error);
+		}
+
 ?>

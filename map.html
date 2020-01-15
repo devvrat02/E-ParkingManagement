@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset='utf-8' />
-<title>Map</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
-<style>
-    body { margin: 35%; padding: 0; }
-        #map { position: absolute; top: 25%; bottom:0; width: 50%; };
-</style>
+    <meta charset='utf-8' />
+    <title>Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <style>
+        .map {
+            height: 100%;
+            width: 100%;
+            min-height: 650px;
+            min-width: 500px;
+        }
+        
+        ;
+    </style>
 </head>
+
 <body bgcolor='RED'>
-<script>
-        var x = document.getElementById("demo");
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
+    <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ"></iframe>
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
-    <div id='map' style='width: 400px; height: 300px;'></div>
-<script>
+</body>
 
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZGV2dnJhdCIsImEiOiJjazNwd3FuazEwNGhjM2ZwNmxyam43amUzIn0.pNvLxHmWSn1JHcXmw6j1gA';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-  });
-</script>
- </body>
 </html>

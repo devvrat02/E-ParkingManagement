@@ -77,6 +77,44 @@ require 'mysqlConnect.php';
                 height: auto;
             }
         }
+        p {
+    padding: 0;
+    margin: 0;
+}
+form {
+    text-align: center;
+    margin-top: 0;
+}
+
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+textarea {
+    height: 100px;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+
         
         .user-area .user-avatar {
             float: right;
@@ -121,7 +159,28 @@ $b=$_SESSION['name'];
         </nav>
 
         <article>
-              <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ" style="weidth=100% height=100px" ></iframe>
+        <div class="section">
+            <h1><span>Feedback</span></h1>
+ </div>
+
+
+<div class="section">
+            <p>We would love to hear your thoughts, concerns or problems </p> 
+            
+            
+                <circle cx="50" cy="50" r="50" fill="#FDD835"/>
+                <circle cx="30" cy="30" r="10" fill="#FFFFFF"/>
+                <circle cx="70" cy="30" r="10" fill="#FFFFFF"/>
+                <circle cx="30" cy="30" r="5" fill="#000000"/>
+                <circle cx="70" cy="30" r="5" fill="#000000"/>
+                <path d="M 30 70 q 20 20 40 0" stroke="#FFFFFF" stroke-width="5" fill="none" />
+            </svg>
+<form>
+                
+                
+                <textarea name="message" placeholder="Message" required ></textarea>
+                <input type="submit" value="SUBMIT" class="submit" />
+            </form>
 <?php    if(!($a!=null &&$b!=null))         
 {
 	echo "<script>

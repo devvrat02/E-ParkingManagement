@@ -12,8 +12,11 @@ require 'mysqlConnect.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-    * {
+    <script src="js/ajax.js">
+	
+	</script>
+<style>
+        * {
             box-sizing: border-box;
         }
         
@@ -33,7 +36,7 @@ require 'mysqlConnect.php';
         
         nav {
             float: left;
-            width: 25%;
+            width: 30%;
             height: 300px;
             /* only for demonstration, should be removed */
             background: black;
@@ -49,7 +52,7 @@ require 'mysqlConnect.php';
         article {
             float: left;
             padding: 20px;
-            width: 75%;
+            width: 70%;
             background-color: #f4c430;
             height: 300px;
             /* only for demonstration, should be removed */
@@ -81,23 +84,26 @@ require 'mysqlConnect.php';
         .user-area .user-avatar {
             float: right;
             width: 40px;
-        }</style>
-    </head>
+        }
+        </style>
+    
+</head>
 
 <body>
     <header>
     <?php
 $a=$_SESSION['eml'];
-$b=$_SESSION['name'];
+$b=$_SESSION['pwd'];
+$c=$_SESSION['name']; 
 ?><h6>
         <div class=''>
-        <div class="cart-nav col-xs-4">
+        <div class="cart-nav col-xs-4" style="">
            <ul>
              <li class="list-group-item" id="requests">           
                 <div class="thumbnail">              
                       <div class="caption">
                       <center>
-                        <h3><?=$b?></h3>
+                        <h3><?=$c?></h3>
                         <p><?=$a?></p>
                         <p><i id="#online" class="fa fa-circle" aria-hidden="true"></i> Online</p>
                         <p><a href="logout.php"><i class="fa fa-power-off" aria-hidden="true"></i> lOGOUT</a></p>
@@ -112,23 +118,34 @@ $b=$_SESSION['name'];
     <section>
         <nav>
             <ul>
-                <li><a href="user.php" onclick=''>DASHBOARD</a></li>
+                <li><a href="user.php">USER DASHBOARD</a></li>
                 <li><a href='user_book.php'>BOOK PARKING</a></li>
                 <li><a href="map.php">LOCATION/PATH</a></li>
-                <li><a href="feedback.php">Feedback</a></li>
+                <li><a href="feedback.php.php">FEEDBACK</a></li>
             </ul>
             </div>
         </nav>
 
         <article>
-              <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ" style="weidth=100% height=100px" ></iframe>
-<?php    if(!($a!=null &&$b!=null))         
+        <?php
+if($a!=null &&$b!=null)
 {
-	echo "<script>
-				
-				window.location.href='login.php';
-				</script>";
-			
+echo "<form name='form' ><input type='hidden' value='$a' id='userid'><input type='hidden' id='password' value='$b'></form>";
+echo "</a><th></th></a><br>";
+$_SESSION['emal']=$a;
+$_SESSION['psd']=$b;
+echo "<button onclick='fun();'>Parking 1</button>";
+echo "<button onclick='fun2();'>Parking 2</button>";
+echo "<button onmouseover='func();'>Status</button>";
+echo "<div id='page1'></div>";
+}
+else
+{
+echo "<script>
+            
+            window.location.href='login.php';
+            </script>";
+        
 }
 ?>
         </article>

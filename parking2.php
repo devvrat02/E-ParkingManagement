@@ -1,0 +1,53 @@
+<?php
+session_start();
+require 'mysqlConnect.php';
+$a=$_SESSION["emal"];
+$b=$_SESSION["psd"];
+$sql="select * from parkingbook where email='$a'";
+$result=$con->query($sql);
+if($result->num_rows==0)
+{
+	$rat="";
+	$sql="select * from demo2";
+	$result=$con->query($sql);
+	$check="demo2";
+	if($result->num_rows>0)
+	{
+		echo "<form action='submitParking.php' method='post'><table >";
+		$sql="select * from parking";
+		$result1=$con->query($sql);
+		if($result1->num_rows>0)
+		{
+			while($row=$result1->fetch_assoc())
+			{
+				$rt=$row["name"];
+				if($rt=="demo2")
+				{
+					$rat=$row["rate"];
+					echo "<h6>".$row['rate'].".Rs/Hour</h6>";
+				}
+			}
+		}
+		while($row=$result->fetch_assoc())
+		{
+			$st=$row["status"];
+			$sl=$row["slot"];
+			
+			if($st=="available")
+			{
+			echo "<tr><td>Parking Slot<input type='radio' name='slot' value='$sl'>".$sl."</td></tr>";
+			}
+		}
+		$_SESSION['page']=$check;
+		echo "<input type='hidden' value='$a' name='email'><input type='hidden' value='$b' name='password'><input type='hidden' value='$rat.Rs/Hour' name='rate'><input type='text' required='required' name='car' placeholder='Car Number'>";
+		echo "Entry  Time::<input type='time' required='required' name='entry' placeholder='Entry Time'>";
+		echo "Exit Time::<input type='time' required='required' name='exit' placeholder='Exit Time'><button>Book Now</button></form></table>";
+
+	}
+}
+else{
+	echo "<h1>You Already Book Your Parking Slot</h1>";
+}
+
+
+?>

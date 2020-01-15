@@ -4,7 +4,6 @@ require 'mysqlConnect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Book Parking</title>
     <meta charset="utf-8">
@@ -13,7 +12,7 @@ require 'mysqlConnect.php';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-    * {
+        * {
             box-sizing: border-box;
         }
         
@@ -33,7 +32,7 @@ require 'mysqlConnect.php';
         
         nav {
             float: left;
-            width: 25%;
+            width: 30%;
             height: 300px;
             /* only for demonstration, should be removed */
             background: black;
@@ -49,7 +48,7 @@ require 'mysqlConnect.php';
         article {
             float: left;
             padding: 20px;
-            width: 75%;
+            width: 70%;
             background-color: #f4c430;
             height: 300px;
             /* only for demonstration, should be removed */
@@ -77,12 +76,9 @@ require 'mysqlConnect.php';
                 height: auto;
             }
         }
-        
-        .user-area .user-avatar {
-            float: right;
-            width: 40px;
-        }</style>
-    </head>
+    </style>
+
+</head>
 
 <body>
     <header>
@@ -112,32 +108,32 @@ $b=$_SESSION['name'];
     <section>
         <nav>
             <ul>
-                <li><a href="user.php" onclick=''>DASHBOARD</a></li>
-                <li><a href='user_book.php'>BOOK PARKING</a></li>
-                <li><a href="map.php">LOCATION/PATH</a></li>
-                <li><a href="feedback.php">Feedback</a></li>
+                <li><a href="admin.php">DASHBOARD</a></li>
+                <li><a href="admin_vehicles.php">VEHICLES</a></li>
+                <li><a href="admin_rates.php">RATES</a></li>
+                <li><a href="admin_feedback.php">REPORTS</a></li>
             </ul>
             </div>
         </nav>
 
-        <article>
-              <iframe class='map' src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ" style="weidth=100% height=100px" ></iframe>
-<?php    if(!($a!=null &&$b!=null))         
+        <article id='box'>
+            <?php    if($a!=null &&$b!=null){
+                $_SESSION['emal']=$a;
+                $_SESSION['psd']=$b;
+            } else        
 {
 	echo "<script>
 				
-				window.location.href='login.php';
+				window.location.href='admin_login.php';
 				</script>";
 			
 }
 ?>
         </article>
     </section>
-
     <footer>
         <p>E-Parking Project</p>
     </footer>
 
 </body>
-
 </html>
