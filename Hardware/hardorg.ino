@@ -27,7 +27,7 @@ char C[]="where slot= \'C\'";
 char D[]="where slot= \'D\'";
 IPAddress server_addr(54,39,75,7);
 
-//const char* host= "files.000webhost.com";
+
 char user[] = "";           // MySQL user
 char password[] = "";       // MySQL password
 
