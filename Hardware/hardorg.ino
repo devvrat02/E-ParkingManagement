@@ -6,8 +6,8 @@
 #include <WiFiClient.h>
 
 
-char ssid[] = "Linux";                 // Network Name
-char pass[] = "malviya_4";                 // Network Password
+char ssid[] = "";                 // Network Name
+char pass[] = "";                 // Network Password
 byte mac[6];
 WiFiServer server(80);
 IPAddress ip(192, 168, 0, 4);
@@ -16,25 +16,29 @@ IPAddress subnet(255, 255, 255, 0);
 
 WiFiClient client;
 MySQL_Connection conn((Client *)&client);
-DNSClient dns_client;
-
-char updaten_SQL[] = "Update INTO demo1 Set status=no where slot=%c";
-char updatey_SQL[] = "Update INTO demo1 Set status=yes where slot=%c";
-
+//DNSClient dns_client;
+char conn_database[]="";
+char updaten_SQL[] = "Update demo1 Set status=\'available\' %s";
+char updatey_SQL[] = "Update demo1 Set status=\'unavailable\' %s";
+char getvalue[]= "SELECT status,In_time,exit_time FROM demo1 %s";
+char A[]="where slot= \'A\'";
+char B[]="where slot= \'B\'";
+char C[]="where slot= \'C\'";
+char D[]="where slot= \'D\'";
 IPAddress server_addr(54,39,75,7);
 
 //const char* host= "files.000webhost.com";
-char user[] = "ujj3ghjqtx4qdtwy";           // MySQL user
-char password[] = "fXbl4su78rBnom0pfeWM";       // MySQL password
+char user[] = "";           // MySQL user
+char password[] = "";       // MySQL password
 
 char query[50];
-const int trigPin1 = D0;  //D0
-const int echoPin1 = D1;  //D1
-const int trigPin2 = D2;  //D2
-const int echoPin2 = D3;  //D3
-const int trigPin3 = D4;  //D4
+const int trigPin1 = D1;  //D1
+const int echoPin1 = D0;  //D0
+const int trigPin2 = D3;  //D3
+const int echoPin2 = D2;  //D2
+const int trigPin3 = D6;  //D6
 const int echoPin3 = D5;  //D5
-const int trigPin4 = D6;  //D6
+const int trigPin4 = D8;  //D8
 const int echoPin4 = D7;  //D7
 
 // defines variables
@@ -104,14 +108,17 @@ Serial.println(server_addr);
     delay(200);
     Serial.print ( "." );
   }
-
   Serial.println("");
   Serial.println("Connected to SQL Server!");  
-
+   sprintf(query,conn_database );
+    Serial.println("Connecting Database");
+  Serial.println(query);
+MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn); 
+  cur_mem->execute(query);
 }
 
 void sensor1()
-{
+{MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
 digitalWrite(trigPin1, LOW);
 delayMicroseconds(2);
 
@@ -129,24 +136,25 @@ Serial.print("Car slot 1 ");
 if(distance1<maxdistance)
 { 
 Serial.println("yes");
-  sprintf(query, updatey_SQL, 'A');
+  sprintf(query, updatey_SQL, A);
   }
-  else {Serial.println("NO");
-      sprintf(query, updaten_SQL, 'A');
+  else {
+  Serial.println("NO");
+      sprintf(query, updaten_SQL, A);
   }
   Serial.println("Recording data.");
   Serial.println(query);
   
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+ 
   
   cur_mem->execute(query);
 
-  delete cur_mem;
+ delete cur_mem;
 
 }
 
 void sensor2()
-{
+{MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
 digitalWrite(trigPin2, LOW);
 delayMicroseconds(2);
 
@@ -164,24 +172,24 @@ Serial.print("Car slot 2 ");
 if(distance2<maxdistance)
 { 
 Serial.println("yes");
-  sprintf(query, updatey_SQL, 'B');
+  sprintf(query, updatey_SQL, B);
   }
   else {Serial.println("NO");
-      sprintf(query, updaten_SQL, 'B');
+      sprintf(query, updaten_SQL, B);
   }
   Serial.println("Recording data.");
   Serial.println(query);
   
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+ 
   
   cur_mem->execute(query);
 
-  delete cur_mem;
-
+ 
+delete cur_mem;
 }
 
 void sensor3()
-{
+{MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
 digitalWrite(trigPin3, LOW);
 delayMicroseconds(2);
 
@@ -199,20 +207,19 @@ Serial.print("Car slot 3 ");
 if(distance3<maxdistance)
 {
  Serial.println("yes");
-  sprintf(query, updatey_SQL, 'C');
+  sprintf(query, updatey_SQL, C);
  }
   else {Serial.println("NO");
-      sprintf(query, updaten_SQL, 'C');
+      sprintf(query, updaten_SQL, C);
   }
   Serial.println("Recording data.");
   Serial.println(query);
   
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+
   
   cur_mem->execute(query);
 
-  delete cur_mem;
-
+delete cur_mem;
 }
 
 void sensor4()
@@ -234,28 +241,30 @@ Serial.print("Car slot 4 ");
 if(distance4< maxdistance)
 { 
 Serial.println("yes");
-  sprintf(query, updatey_SQL, 'D');
+  sprintf(query, updatey_SQL, D);
   }
   else {Serial.println("NO");
-      sprintf(query, updaten_SQL, 'D');
+      sprintf(query, updaten_SQL, D);
   }
   Serial.println("Recording data.");
   Serial.println(query);
-  
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  
+MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);  
+
   cur_mem->execute(query);
 
-  delete cur_mem;
 
+delete cur_mem;
 }
 
 
 void loop() {
 
 sensor1();
+delay(1000);
 sensor2();
+delay(1000);
 sensor3();
+delay(1000);
 sensor4(); 
-  delay(10000); //10 sec  
+    delay(10000); //10 sec  
 }
