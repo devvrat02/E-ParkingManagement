@@ -25,7 +25,7 @@ if($result->num_rows>0)
 }
 
 else{
-	echo "<h6>You Are not Book Your Parking Slot Yet</h6>";
+	echo "<h6>Parking not book yet</h6>";
 }
 
 ?>
