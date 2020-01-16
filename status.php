@@ -7,7 +7,7 @@ $sql="select * from parkingbook where email='$a'";
 $result=$con->query($sql);
 if($result->num_rows>0)
 {
-	echo "<table border='1'><tr><th>Email_ID</th><th>Car_Number</th><th>Slot</th>Rate</th><th>Entry time</th><th>Exit_Time</th></tr>";
+	echo "<table border='1'><tr><th>Email_ID</th><th>Car_Number</th><th>Slot</th><th>Rate</th><th>Entry time</th><th>Exit_Time</th></tr>";
 	while($row=$result->fetch_assoc())
 	{
 		echo "<tr><td>".$row["email"]."</td>";
@@ -19,9 +19,8 @@ if($result->num_rows>0)
 	}
 	echo "</table>";
 }
-
 else{
-	echo "<h1>You Are not Book Your Parking Slot Yet</h1>";
+	echo "<h5>Parking Not Book</h5>";
 }
 
 
