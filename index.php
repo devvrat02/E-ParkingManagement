@@ -1,42 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-wiadth, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-    a:link {
-  color: red;}
-  .map {
-            height: 100%;
-            width: 100%;
-            min-height: 400px;
-            min-width: 540px;
-  }
-</style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>E-Parking</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo/mono.jpg">
+    <link rel="shortcut icon" type="image/jpg" href="logo/mono.jpg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
 </head>
 
-<body class="bg-success">
-    <div class="d-flex bg-textlight justify-content-around" >
-       <b> <div class="p-2 bg-success flex-fill justify-content-center"><a href='index.php'>HOME</a></div></b>
-       <b>  <div class="p-2 bg-success flex-fill justify-content-center"><a href='login.php'>LOGIN</a></div></b>
-       <b>  <div class="p-2 bg-success flex-fill justify-content-center"><a href='admin_login.php'>ADMIN</a></div></b>
-       <b>  <div class="p-2 bg-success flex-fill justify-content-center"><a href='about.php'>ABOUT</a></div></b>
-       <b>  <div class="p-2 bg-success flex-fill justify-content-center"><a href='team.php'>TEAM</a></div></b>
-    </div>
-
-    <div class="container align-middle bg-danger justify-content-center" style="padding:2%; max-width: 50%;max-height: 60%;">
-        <div class=" col-sm-10 " style="display: block; font-size: large;font-family: sans-serif;">
-        <iframe class='map' frameborder='0' height='465px' width='470px' src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ" frameborder="0" allowfullscreen></iframe>
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="admin_login.php">Epark</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.php">login/sign UP</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.php">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    </div>
-
-    <div class="d-flex bg-primary justify-content-center" style="margin-top:1px">
-        <p>E Parking Management</p>
-    </div>
+    </nav>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" data-aos="fade">
+        <div class="container"><a class="navbar-brand pulse animated infinite logo" href="admin_login.php">Epark</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item item" role="presentation"><a class="nav-link active" href="#home" target="_top" data-bs-hover-animate="swing">HOME</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link active" href="login.php" data-bs-hover-animate="pulse">Login/Sign Up</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link active" href="#info" data-bs-hover-animate="pulse">Info</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link active" href="#about" data-bs-hover-animate="pulse">ABOUT</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link active" href="contact-us.php" data-bs-hover-animate="pulse">CONTACT US</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="bg-dark border-light clean-block clean-hero" style="color:rgba(9, 162, 255, 0.85);" id="home">
+            <div class="text">
+                <h2 data-bs-hover-animate="tada">Book Your Parking</h2>
+                <p>Check wheather parking is available</p><a href="login.php"><button class="btn btn-outline-light btn-lg" type="button"  data-bs-hover-animate="rubberBand">Book now</button></a></div>
+        </section>
+        <section class="text-light bg-dark clean-block clean-info dark" id="info">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Info</h2>
+                    <p>This application is build under the criteria of smart cities that is fast way for parking management&nbsp;</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-6"><iframe allowfullscreen="" frameborder="0" width="100%" height="400" src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ"></iframe></div>
+                    <div
+                        class="col-md-6">
+                        <h3>E-parking Managent</h3>
+                        <div class="getting-started-info">
+                            <p>Anyone can add there parking to the website for adding that in our list please contact us</p>
+                        </div><a href="contact-us.php"><button class="btn btn-outline-primary btn-lg" type="button" data-bs-hover-animate="tada" >Contact us</button></a></div>
+            </div>
+            </div>
+        </section>
+        <section class="text-light bg-dark clean-block features">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Features</h2>
+                    <p>This project give the parking place for that u can park ur vehicle as easy as possible and also show the routes for that location and This provide a managable management service provided by web application&nbsp;</p>
+                </div>
+            </div>
+        </section>
+        <section class="text-light bg-dark clean-block about-us" id="about">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">About Us</h2>
+                    <p>This project is build in the criteria of Smart City</p>
+                </div>
+                <div class="card clean-card text-center">
+                    <div class="card-body text-light bg-dark border-dark shadow-lg info">
+                        <h4 class="card-title">Chetan Malviya</h4>
+                        <p class="card-text">Leadear of these Project<br>Guider, Webdesigner,Webdevelopment&nbsp;<br></p>
+                        <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center">
+                            <div class="card-body text-light bg-dark info">
+                                <h4 class="card-title">Mr. Sandeep Jain</h4>
+                                <p class="card-text">Our Mentor<br></p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                            <div class="card-body bg-dark info">
+                                <h4 class="card-title">Siddharth Khandelwal</h4>
+                                <p class="card-text">Intractor, Survey Handler ,<br>Analyzer.<br></p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center">
+                            <div class="card-body bg-dark info">
+                                <h4 class="card-title">Manas Solanki</h4>
+                                <p class="card-text">Prototype Designer, Hardware Installer.</p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                            <div class="card-body bg-dark info">
+                                <h4 class="card-title">Aman Chorasiya</h4>
+                                <p class="card-text">Additorial Member:- for Web development</p>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <a href="k_log.php">Eparking Management</a>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
 </body>
 </html>

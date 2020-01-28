@@ -21,13 +21,24 @@ require 'mysqlConnect.php';
 				$b=$row["username"];
 				$c=$row["password"];
 				$d=$row["park"];
-						
+				$rate=$row["rate"];
+				$stat=$row["stat"];
+				$slots=$row["slots"];
+				$book=$row["book"];
+				$feed=$row["feed"];
+
+
 				$_SESSION['eml']=$a;
 				$_SESSION['name']=$b;
 				$_SESSION['pwd']=$c;
 				$_SESSION['prk']=$d;
+				$_SESSION['rate']=$rate;
+				$_SESSION['stat']=$stat;
+				$_SESSION['slots']=$slots;
+				$_SESSION['book']=$book;
+				$_SESSION['feed']=$feed;
 				$con->close();
-				header("location:admin.php");
+				header("location:admin/");
 				exit;
 				
 			}
