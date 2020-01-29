@@ -25,7 +25,7 @@ if($result->num_rows>0)
 		echo "<h6>Slots:".$row["slots"]."</h6>";
 		echo "<h6>Price:".$row["rates"]."</h6>";
 		echo "<h6>Entry time:".$row["entry"]."</h6>";
-		echo "<h6>Exit time:".$row["parking"]."</h6>";
+		echo "<h6>Parking:".$row["parking"]."</h6>";
 		echo "</center>";
 	echo "<button type='submit' class='btn btn-primary'>Cancel</button>";
 	echo	"</div>	  </div>";
