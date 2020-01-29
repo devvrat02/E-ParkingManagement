@@ -48,21 +48,21 @@
         <section class="bg-dark border-light clean-block clean-hero" style="color:rgba(9, 162, 255, 0.85);" id="home">
             <div class="text">
                 <h2 data-bs-hover-animate="tada">Book Your Parking</h2>
-                <p>Check wheather parking is available</p><a href="login.php"><button class="btn btn-outline-light btn-lg" type="button"  data-bs-hover-animate="rubberBand">Book now</button></a></div>
+                <p>Check whether parking is available</p><a href="login.php"><button class="btn btn-outline-light btn-lg" type="button"  data-bs-hover-animate="rubberBand">Book now</button></a></div>
         </section>
         <section class="text-light bg-dark clean-block clean-info dark" id="info">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Info</h2>
-                    <p>This application is build under the criteria of smart cities that is fast way for parking management&nbsp;</p>
+                    <p>The application is built with an ultimate goal of contributing our efforts towards the development of cities and a step towards smart cities project.&nbsp;</p>
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-6"><iframe allowfullscreen="" frameborder="0" width="100%" height="400" src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ"></iframe></div>
                     <div
                         class="col-md-6">
-                        <h3>E-parking Managent</h3>
+                        <h3>E-parking Management</h3>
                         <div class="getting-started-info">
-                            <p>Anyone can add there parking to the website for adding that in our list please contact us</p>
+                            <p>If anyone would like to collaborate their parking with us, feel free to contact us</p>
                         </div><a href="contact-us.php"><button class="btn btn-outline-primary btn-lg" type="button" data-bs-hover-animate="tada" >Contact us</button></a></div>
             </div>
             </div>
@@ -71,7 +71,7 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Features</h2>
-                    <p>This project give the parking place for that u can park ur vehicle as easy as possible and also show the routes for that location and This provide a managable management service provided by web application&nbsp;</p>
+                    <p>The application allows you to pre-book the parking slot and will also provide the best possible route from your location, so as to ease your parking problems.&nbsp;</p>
                 </div>
             </div>
         </section>
@@ -84,7 +84,7 @@
                 <div class="card clean-card text-center">
                     <div class="card-body text-light bg-dark border-dark shadow-lg info">
                         <h4 class="card-title">Chetan Malviya</h4>
-                        <p class="card-text">Leadear of these Project<br>Guider, Webdesigner,Webdevelopment&nbsp;<br></p>
+                        <p class="card-text">Leadear of these Project<br> Web designer,Web developer&nbsp;<br></p>
                         <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                     </div>
                 </div>
@@ -92,13 +92,13 @@
                     <div class="col-sm-6 col-lg-4">
                         <div class="card clean-card text-center">
                             <div class="card-body text-light bg-dark info">
-                                <h4 class="card-title">Mr. Sandeep Jain</h4>
+                                <h4 class="card-title">Mr. Sandeep Kumar Jain</h4>
                                 <p class="card-text">Our Mentor<br></p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                             <div class="card-body bg-dark info">
                                 <h4 class="card-title">Siddharth Khandelwal</h4>
-                                <p class="card-text">Intractor, Survey Handler ,<br>Analyzer.<br></p>
+                                <p class="card-text">Interactor, Survey Handler ,<br>Analyzer<br></p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
@@ -107,14 +107,10 @@
                         <div class="card clean-card text-center">
                             <div class="card-body bg-dark info">
                                 <h4 class="card-title">Manas Solanki</h4>
-                                <p class="card-text">Prototype Designer, Hardware Installer.</p>
+                                <p class="card-text">Prototype Designer, Hardware and PCB Designer.</p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
-                            <div class="card-body bg-dark info">
-                                <h4 class="card-title">Aman Chorasiya</h4>
-                                <p class="card-text">Additorial Member:- for Web development</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
