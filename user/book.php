@@ -108,12 +108,12 @@ $_SESSION['psd']=$b;}
                             <div class="col-md-2">
                     <div class="dropdown create">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Create Content
+                Book Parking
                 <span class="caret"></span>
               </button><div class="col-md-2"></div>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><button class="btn btn-default" style="border:none;" onclick='fun();'>Parking 1</button></li>
-                            <li><button class="btn btn-default" style="border:none;" onclick='fun2();'>Parking 2</button></li>
+                            <li><a onclick='fun();'>Parking 1</a></li>
+                            <li><a onclick='fun2();'>Parking 2</a></li>
                         </ul>
                     </div>
                 </div> 
