@@ -26,7 +26,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,exittime,slots,rat
 				
 				if($check=="demo1")
 				{
-					$sql="update demo1 set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
+					$sql="update demo1 set `status`='booked',`user`='$c',`In_time`='$d', where `slot`='$f'";
 					if($con->query($sql)===true)
 					{
 						echo "Data inserted successfilly";
@@ -38,7 +38,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,exittime,slots,rat
 				}
 				else if($check=="demo2")
 				{
-					$sql="update demo2 set status='booked' where slot='$f'";
+					$sql="update demo2 set `status`='booked',`user`='$c',`In_time`='$d', where `slot`='$f'";
 					if($con->query($sql)===true)
 					{
 						echo "Data inserted successfilly";
