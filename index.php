@@ -89,15 +89,19 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-sm-6 col-lg-4">
+                    <div class="col-sm-6 col-lg-4" >
                         <div class="card clean-card text-center">
                             <div class="card-body text-light bg-dark info">
                                 <h4 class="card-title">Mr. Sandeep Kumar Jain</h4>
                                 <p class="card-text">Our Mentor<br></p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center">
                             <div class="card-body bg-dark info">
-                                <h4 class="card-title">Siddharth Khandelwal</h4>
+                            <h4 class="card-title">Siddharth Khandelwal</h4>
                                 <p class="card-text">Interactor, Survey Handler ,<br>Analyzer<br></p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
@@ -110,7 +114,6 @@
                                 <p class="card-text">Prototype Designer, Hardware and PCB Designer.</p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
-                           
                         </div>
                     </div>
                 </div>
