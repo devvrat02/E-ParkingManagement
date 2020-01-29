@@ -5,16 +5,17 @@ $a=$_POST["email"];
 $b=$_POST["password"];
 $c=$_POST["car"];
 $d=$_POST["entry"];
-$e=$_POST["exit"];
+$e=$_POST["entry"];
 $f=$_POST["slot"];
 $g=$_POST["rate"];
 $check=$_SESSION['page'];
+$book="booked";
 $sql="select * from parkingbook where email='$a' ";
 $result=$con->query($sql);
 if($result->num_rows==0)
 {
 
-$sql="insert into parkingbook(email,password,car_number,entry,exittime,slots,rates,parking) values('$a','$b','$c','$d','$e','$f','$g','$check')";
+$sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parking) values('$a','$b','$c','$e','$f','$g','$check')";
 				if($con->query($sql)===true)
 				{
 					echo "Data inserted successfilly";
@@ -26,7 +27,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,exittime,slots,rat
 				
 				if($check=="demo1")
 				{
-					$sql="update demo1 set `status`='booked',`user`='$c',`In_time`='$d', where `slot`='$f'";
+					$sql="update demo1 set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
 					if($con->query($sql)===true)
 					{
 						echo "Data inserted successfilly";
@@ -38,7 +39,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,exittime,slots,rat
 				}
 				else if($check=="demo2")
 				{
-					$sql="update demo2 set `status`='booked',`user`='$c',`In_time`='$d', where `slot`='$f'";
+					$sql="update demo1 set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
 					if($con->query($sql)===true)
 					{
 						echo "Data inserted successfilly";
