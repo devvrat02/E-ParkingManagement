@@ -6,8 +6,8 @@
 #include <SoftwareSerial.h>
 
 SoftwareSerial mySerial(D0, D1); // RX, TX
-char ssid[] = "Mm";                 // Network Name
-char pass[] = "12345678";                 // Network Password
+char ssid[] = "";                 // Network Name
+char pass[] = "";                 // Network Password
 byte mac[6];
 WiFiServer server(80);
 IPAddress ip;
@@ -31,7 +31,7 @@ String Ledstat1, Ledstat2, Ledstat3, Ledstat4;
 WiFiClient client;
 MySQL_Connection conn((Client *)&client);   //Sql connection
 //DNSClient dns_client;
-char conn_database[] = "USE bsdyxgcmc1ij1rsxuiae";          //Database name
+char conn_database[] = "USE";          //Database name Use Database
 char updaten_SQL[] = "Update demo1 Set status=\'available\' %s";
 char updatey_SQL[] = "Update demo1 Set status=\'unavailable\' %s";
 char getvalue[] = "SELECT * FROM demo1 %s";
@@ -39,10 +39,10 @@ char A[] = "where slot= \'A\'";
 char B[] = "where slot= \'B\'";
 char C[] = "where slot= \'C\'";
 char D[] = "where slot= \'D\'";
-IPAddress server_addr(54, 39, 75, 7);
+IPAddress server_addr(0,0,0,0); //db sserver address
 
-char user[] = "ujj3ghjqtx4qdtwy";           // MySQL user
-char password[] = "fXbl4su78rBnom0pfeWM";       // MySQL password
+char user[] = "";           // MySQL user
+char password[] = "";       // MySQL password
 
 char query[50];
 int led1, led2, led3, led4;
@@ -111,8 +111,17 @@ void setup()
 
 void sensor1()
 { MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  book1 = feed1();
-  if (book1 == 0) {
+    sprintf(query, getvalue, A);
+  cur_mem->execute(query);
+  column_names *cols = cur_mem->get_columns();
+  mySerial.println();
+  // Read the rows and print them
+  row_values *row = NULL;
+  do {
+    row = cur_mem->get_next_row();
+    if (row != NULL) {
+      if (row->values[2] != "booked") {
+  // Deleting the cursor also frees up memory used
     if (U1.toInt() == 1)
     {
       mySerial.println("yes");
@@ -128,16 +137,29 @@ void sensor1()
     mySerial.println(query);
 
     cur_mem->execute(query);
-
+      } else {
+        led1=1;
+        }
+      }
+  } while (row != NULL);
     delete cur_mem;
-  } mySerial.println(led2);
+   mySerial.println(led2);
 }
 
 void sensor2()
 { MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  book2 = feed2();
-  if (book2 == 0) {
-    if (U2.toInt() == 1)
+    sprintf(query, getvalue, B);
+  cur_mem->execute(query);
+  column_names *cols = cur_mem->get_columns();
+  mySerial.println();
+  // Read the rows and print them
+  row_values *row = NULL;
+  do {
+    row = cur_mem->get_next_row();
+    if (row != NULL) {
+      if (row->values[2] != "booked") {
+  // Deleting the cursor also frees up memory used
+    if (U1.toInt() == 1)
     {
       mySerial.println("yes");
       sprintf(query, updatey_SQL, B);
@@ -146,22 +168,36 @@ void sensor2()
     else {
       mySerial.println("NO");
       sprintf(query, updaten_SQL, B);
-      led2 = 0;
+    led2 = 0;
     }
     mySerial.println("Recording data.");
     mySerial.println(query);
 
     cur_mem->execute(query);
+      } else {
+        led2=1;
+        }
+      }
+  } while (row != NULL);
     delete cur_mem;
-  } mySerial.println(led2);
+   mySerial.println(led2);
 }
 
 void sensor3()
 {
   MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  book3 = feed3();
-  if (book3 == 0) {
-    if (U3.toInt() == 1)
+    sprintf(query, getvalue, C);
+  cur_mem->execute(query);
+  column_names *cols = cur_mem->get_columns();
+  mySerial.println();
+  // Read the rows and print them
+  row_values *row = NULL;
+  do {
+    row = cur_mem->get_next_row();
+    if (row != NULL) {
+      if (row->values[2] != "booked") {
+  // Deleting the cursor also frees up memory used
+    if (U1.toInt() == 1)
     {
       mySerial.println("yes");
       sprintf(query, updatey_SQL, C);
@@ -170,21 +206,36 @@ void sensor3()
     else {
       mySerial.println("NO");
       sprintf(query, updaten_SQL, C);
-      led3 = 0;
+    led3 = 0;
     }
     mySerial.println("Recording data.");
     mySerial.println(query);
+
     cur_mem->execute(query);
+      } else {
+        led3=1;
+        }
+      }
+  } while (row != NULL);
     delete cur_mem;
-  } mySerial.println(led2);
+   mySerial.println(led3);
 }
 void sensor4()
-{
-  book4 = feed4();
-  if (book4 == 0) {
-    if (U4.toInt() == 1)
+{MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+    sprintf(query, getvalue, D);
+  cur_mem->execute(query);
+  column_names *cols = cur_mem->get_columns();
+  mySerial.println();
+  // Read the rows and print them
+  row_values *row = NULL;
+  do {
+    row = cur_mem->get_next_row();
+    if (row != NULL) {
+      if (row->values[2] != "booked") {
+  // Deleting the cursor also frees up memory used
+    if (U1.toInt() == 1)
     {
-      Serial.println("yes");
+      mySerial.println("yes");
       sprintf(query, updatey_SQL, D);
       led4 = 1;
     }
@@ -195,10 +246,15 @@ void sensor4()
     }
     mySerial.println("Recording data.");
     mySerial.println(query);
-    MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+
     cur_mem->execute(query);
+      } else {
+        led4=1;
+        }
+      }
+  } while (row != NULL);
     delete cur_mem;
-  } mySerial.println(led2);
+   mySerial.println(led2);
 }
 void loop()
 {
@@ -261,95 +317,4 @@ void loop()
       readString += c; //makes the string readString
     }
   }
-}
-
-int feed1() {
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  sprintf(query, getvalue, A);
-  cur_mem->execute(query);
-  column_names *cols = cur_mem->get_columns();
-
-  mySerial.println();
-  // Read the rows and print them
-  row_values *row = NULL;
-  do {
-    row = cur_mem->get_next_row();
-    if (row != NULL) {
-      if (row->values[2] == "booked") {
-        return 1;
-      } else {
-        return 0;
-      }
-    }
-  } while (row != NULL);
-  // Deleting the cursor also frees up memory used
-  delete cur_mem;
-}
-int feed2() {
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  sprintf(query, getvalue, B);
-  cur_mem->execute(query);
-  column_names *cols = cur_mem->get_columns();
-
-  mySerial.println();
-  // Read the rows and print them
-  row_values *row = NULL;
-  do {
-    row = cur_mem->get_next_row();
-    if (row != NULL) {
-      if (row->values[2] == "booked") {
-        led2 = 1;
-        return 1;
-      } else {
-        led2 = 0;
-        return 0;
-      }
-    }
-  } while (row != NULL);
-  // Deleting the cursor also frees up memory used
-  delete cur_mem;
-}
-int feed3() {
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  sprintf(query, getvalue, C);
-  cur_mem->execute(query);
-  column_names *cols = cur_mem->get_columns();
-
-  mySerial.println();
-  // Read the rows and print them
-  row_values *row = NULL;
-  do {
-    row = cur_mem->get_next_row();
-    if (row != NULL) {
-      if (row->values[2] == "booked") {
-        return 1;
-      } else {
-        return 0;
-      }
-    }
-  } while (row != NULL);
-  // Deleting the cursor also frees up memory used
-  delete cur_mem;
-}
-int feed4() {
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-  sprintf(query, getvalue, D);
-  cur_mem->execute(query);
-  column_names *cols = cur_mem->get_columns();
-
-  mySerial.println();
-  // Read the rows and print them
-  row_values *row = NULL;
-  do {
-    row = cur_mem->get_next_row();
-    if (row != NULL) {
-      if (row->values[2] == "booked") {
-        return 1;
-      } else {
-        return 0;
-      }
-    }
-  } while (row != NULL);
-  // Deleting the cursor also frees up memory used
-  delete cur_mem;
 }
