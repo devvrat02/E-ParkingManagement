@@ -84,7 +84,7 @@
                 <div class="card clean-card text-center">
                     <div class="card-body text-light bg-dark border-dark shadow-lg info">
                         <h4 class="card-title">Chetan Malviya</h4>
-                        <p class="card-text">Leader of these Project<br> Web designer,Web developer&nbsp;<br></p>
+                        <p class="card-text">Leader of the Project<br> Web designer,Web developer&nbsp;<br></p>
                         <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                     </div>
                 </div>
