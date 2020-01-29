@@ -149,7 +149,7 @@ if(!($a!=null &&$b!=null))
 {
 	echo "<script>
 				
-				window.location.href='login.php';
+				window.location.href='../admin_login.php';
 				</script>";
 			
 }
