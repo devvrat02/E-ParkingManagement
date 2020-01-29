@@ -114,7 +114,7 @@ $b=$_SESSION['name'];
 {
 	echo "<script>
 				
-				window.location.href='login.php';
+				window.location.href='../login.php';
 				</script>";
 			
 }
