@@ -1,13 +1,19 @@
 <?php
-
+           /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		check_login comes through user login
+                            *
+                            */
 session_start();
 require 'mysqlConnect.php';
-		$a6=$_POST["email"];
-		$a7=$_POST["password"];
+		$a6=$_POST["email"];						//user email
+		$a7=$_POST["password"];						//user password 
 	try{
 		
-		$sql="select * from users where email='$a6' and password ='$a7'";
-		$result = $con->query($sql);
+		$sql="select * from users where email='$a6' and password ='$a7'";	//sql query
+		$result = $con->query($sql);			//execution
 		if($result===false)
 		{
 
@@ -19,14 +25,14 @@ require 'mysqlConnect.php';
 			{
 				$a=$row["email"];
 				$b=$row["username"];
-				$c=$row["password"];
+				$c=$row["password"];///No Means thats temporary variable no  use 
 				
-						
+						//session for values send
 				$_SESSION['eml']=$a;
 				$_SESSION['name']=$b;
 				$_SESSION['pwd']=$c;
 				$con->close();
-				header("location:user/index.php");
+				header("location:user/index.php"); //jump to user index
 				exit;
 				
 			}
@@ -40,6 +46,6 @@ require 'mysqlConnect.php';
 			echo "<script>
 				alert('Your Email or Password Does Not Matched Please Enter Valid Email or Password');
 				window.location.href='login.php';
-				</script>";
+				</script>";//else login again
 			
 ?>	
