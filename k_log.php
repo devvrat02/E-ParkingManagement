@@ -1,3 +1,12 @@
+<?php
+           /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 	    k_log.php --login page for king or management
+                            *
+            */
+?>
 <!DOCTYPE html>
 <html class="text-monospace text-nowrap text-capitalize text-dark">
 
@@ -21,11 +30,13 @@
                 <h2 class="pulse animated infinite text-info">King</h2>
             </div>
             <form class="bg-dark border rounded border-primary shadow-lg" method="post" target="_self" action="k_check.php">
+                <!--jump to k_check -->
                 <div class="form-group">Username</label><input class="form-control item" name="username" type="text" data-bs-hover-animate="pulse" id="email"></div>
                 <div class="form-group">Password</label><input class="form-control" name="password" type="password" data-bs-hover-animate="pulse" id="password"></div>
                 <button class="btn btn-primary btn-block" type="submit" data-bs-hover-animate="pulse">Log In</button></form>
         </div>
     </section>
+<!--Script  -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
