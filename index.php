@@ -62,7 +62,7 @@
                         class="col-md-6">
                         <h3>E-parking Management</h3>
                         <div class="getting-started-info">
-                            <p>If anyone would like to collaborate their parking with us, feel free to contact us</p>
+                            <p>Parking owners can contact for collaboration</p>
                         </div><a href="contact-us.php"><button class="btn btn-outline-primary btn-lg" type="button" data-bs-hover-animate="tada" >Contact us</button></a></div>
             </div>
             </div>
@@ -84,7 +84,7 @@
                 <div class="card clean-card text-center">
                     <div class="card-body text-light bg-dark border-dark shadow-lg info">
                         <h4 class="card-title">Chetan Malviya</h4>
-                        <p class="card-text">Leader of the Project<br> Web designer,Web developer&nbsp;<br></p>
+                        <p class="card-text">Team Leader<br> Web designer,Web developer&nbsp;<br></p>
                         <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         <div class="card clean-card text-center">
                             <div class="card-body text-light bg-dark info">
                                 <h4 class="card-title">Mr. Sandeep Kumar Jain</h4>
-                                <p class="card-text">Our Mentor<br></p>
+                                <p class="card-text">Mentor<br></p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                         <div class="card clean-card text-center">
                             <div class="card-body bg-dark info">
                             <h4 class="card-title">Siddharth Khandelwal</h4>
-                                <p class="card-text">Interactor, Survey Handler ,<br>Analyzer<br></p>
+                                <p class="card-text">Survey Handler,Web developer<br><br></p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                         <div class="card clean-card text-center">
                             <div class="card-body bg-dark info">
                                 <h4 class="card-title">Manas Solanki</h4>
-                                <p class="card-text">Prototype Designer, Hardware and PCB Designer.</p>
+                                <p class="card-text">Hardware Designer.</p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
