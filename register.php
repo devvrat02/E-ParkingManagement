@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		register.php        user register can done by here
+                            *
+                            */
 session_start();
 require 'mysqlConnect.php';
 ?>
@@ -22,6 +29,7 @@ require 'mysqlConnect.php';
         <section class="bg-dark clean-block clean-form dark">
             <div class="container bg-dark">
                 <div class="bg-dark block-heading">
+<!--     Registeration Form                 -->
                     <h2 class="text-info bg-dark border-dark shadow shake animated">Registration</h2>
                 </div>
                 <form class="text-monospace text-light bg-dark border-dark shadow-sm pulse animated" action="regit.php" method="POST">
@@ -44,6 +52,7 @@ require 'mysqlConnect.php';
             <p>E-Parking Management</p>
         </div>
     </footer>
+<!-- Script     -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
