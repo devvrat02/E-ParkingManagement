@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		vehicles.php show the parking status that the no of cars are park
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $a=$_SESSION['eml'];
@@ -112,7 +119,7 @@ $d=$_SESSION['prk'];
                 <h3 class="panel-title">Users</h3>
               </div>
               <div class="panel-body">
-                    <?php    if($a!=null &&$b!=null){
+                    <?php    if($a!=null &&$b!=null){//Print the table of parking
                 $_SESSION['emal']=$a;
                 $_SESSION['psd']=$b;
                 $sql="select * from $d";
@@ -153,6 +160,6 @@ $d=$_SESSION['prk'];
 				
 				window.location.href='admin_login.php';
 				</script>";
-			
+// 			for authentication 
 }
 ?>
