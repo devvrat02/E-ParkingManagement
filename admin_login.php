@@ -1,6 +1,13 @@
 <?php
+                            /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		admin_login  Admin login Page
+                            *
+                            */
 session_start();
-require 'mysqlConnect.php';
+require 'mysqlConnect.php'; //Establishing  Connection
 ?>
 <!DOCTYPE html>
 <html class="text-monospace text-nowrap text-capitalize text-dark">
@@ -10,6 +17,7 @@ require 'mysqlConnect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Admin - ePark</title>
     <link rel="shortcut icon" type="image/jpg" href="logo/mono.jpg">
+<!-- Add the css File  -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -24,6 +32,7 @@ require 'mysqlConnect.php';
                 <h2 class="text-secondary shadow text-info">Login</h2>
                 <p></p>
             </div>
+<!-- Login Box -->
             <form class="text-capitalize text-light bg-dark border rounded border-dark shadow-lg" method="post" target="_self" action="admincheck.php" style="width: 315px;height: 279px;padding: 22px;">
                 <div class="form-group"><label for="name">Username/email</label><input class="form-control item" type="text" name="username" id="name" placeholder="username"></div>
                 <div class="form-group"><label for="password">Password</label><input class="form-control item" type="password" name="password" id="email" placeholder="password"></div>
@@ -37,11 +46,11 @@ require 'mysqlConnect.php';
         <div></div>
         <div></div>
     </section>
+<!-- Scripts  -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
-
 </html>
