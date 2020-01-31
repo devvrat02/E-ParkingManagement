@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		rates.php   change the rate of parking
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $a=$_SESSION['eml'];
@@ -44,6 +51,7 @@ $rate=$_SESSION['rate'];
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Welcome, <?=$b?></a></li>
                     <li><a href="../logout.php">Logout</a></li>
+<!-- logout the admin -->
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -131,7 +139,9 @@ $rate=$_SESSION['rate'];
             } else        
 {
 	echo "<script>
-				
+
+// For authenticity of admin
+
 				window.location.href='../admin_login.php';
 				</script>";
 			
