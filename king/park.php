@@ -41,7 +41,7 @@ $pwd=$_SESSION['pwd'];
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Welcome,<?=$name?></a></li>
-                    <li><a href="login.html">Logout</a></li>
+                    <li><a href="../logout.html">Logout</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
