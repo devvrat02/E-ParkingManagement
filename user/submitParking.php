@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal 
+                            * Filename: 		submitParking.php For the update the slot that book by the user
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $a=$_POST["email"];
@@ -14,7 +21,7 @@ $sql="select * from parkingbook where email='$a' ";
 $result=$con->query($sql);
 if($result->num_rows==0)
 {
-
+//sql query
 $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parking) values('$a','$b','$c','$e','$f','$g','$check')";
 				if($con->query($sql)===true)
 				{
