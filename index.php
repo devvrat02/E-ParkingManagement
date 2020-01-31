@@ -1,3 +1,10 @@
+           /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		index.php
+                            *
+            */
 <!DOCTYPE html>
 <html>
 
@@ -17,6 +24,7 @@
 </head>
 
 <body>
+<!-- Nav menu  -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container"><a class="navbar-brand logo" href="admin_login.php">Epark</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
@@ -44,6 +52,7 @@
         </div>
         </div>
     </nav>
+<!--  Contact us    -->
     <main class="page landing-page">
         <section class="bg-dark border-light clean-block clean-hero" style="color:rgba(9, 162, 255, 0.85);" id="home">
             <div class="text">
@@ -57,6 +66,7 @@
                     <p>The application is built with an ultimate goal of contributing our efforts towards the development of cities and a step towards smart cities project.&nbsp;</p>
                 </div>
                 <div class="row align-items-center">
+<!--  Google Map -->
                     <div class="col-md-6"><iframe allowfullscreen="" frameborder="0" width="100%" height="400" src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ"></iframe></div>
                     <div
                         class="col-md-6">
@@ -75,6 +85,7 @@
                 </div>
             </div>
         </section>
+<!--  Team info        -->
         <section class="text-light bg-dark clean-block about-us" id="about">
             <div class="container">
                 <div class="block-heading">
@@ -120,11 +131,13 @@
             </div>
         </section>
     </main>
+<!-- King login     -->
     <footer class="page-footer dark">
         <div class="footer-copyright">
             <a href="k_log.php">Eparking Management</a>
         </div>
     </footer>
+<!-- Script     -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
