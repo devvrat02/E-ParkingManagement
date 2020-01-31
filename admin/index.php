@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		index.php admin-dashboard
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $a=$_SESSION['eml'];
@@ -48,6 +55,7 @@ $d=$_SESSION['prk'];
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Welcome, <?=$b?></a></li>
                     <li><a href="../logout.php">Logout</a></li>
+<!--logout button 			 -->
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -95,7 +103,7 @@ $d=$_SESSION['prk'];
                         <a href="rates.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Rates </a>
                     </div>
 
-                    <div class="well">
+<!--                     <div class="well">
                         <h4>Parking Status</h4>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -108,7 +116,7 @@ $d=$_SESSION['prk'];
                                 40%
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-9">
                     <!-- Website Overview -->
@@ -172,6 +180,7 @@ $d=$_SESSION['prk'];
             } else        
 {
 	echo "<script>
+// for not the other one can login	
 				
 				window.location.href='admin_login.php';
 				</script>";
