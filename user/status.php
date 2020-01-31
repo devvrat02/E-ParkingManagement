@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal 
+                            * Filename: 		status.php for the status of booking
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 
@@ -18,7 +25,7 @@ if($result->num_rows>0)
 	echo '<h6 class="card-title">Ticket</h6>';
 	$em=$row["email"];
 		$pd=$row["password"];
-		
+// 		Printing the ticket
 		echo "<input type='hidden' name='email' value='$em'><input type='hidden' name='password' value='$pd'>";
 		echo "<h6>User:".$row["email"]."</h6>";
 		echo "<h6>Car no:".$row["car_number"]."</h6>";
