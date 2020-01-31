@@ -1,4 +1,12 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		upprice.php For database update 
+                                by this price changes in the server
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $a=$_POST["rate"];
