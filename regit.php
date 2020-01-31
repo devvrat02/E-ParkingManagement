@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		regit.php   user registeration is done by here 
+                            *
+                            */
 session_start();
 require 'mysqlConnect.php';
 ?>
