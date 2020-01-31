@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		ad_up_pk.php For adding the parking by management
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $name=$_SESSION['name'];
@@ -13,7 +20,7 @@ $pwd=$_SESSION['pwd'];
   $long=$_POST['long'];  	
   $slots=$_POST['slots'];  	
   $password=$_POST['password'];
-
+//Verification
 	if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
 		echo"<script>alert('your email is not valid!')</script>";
       echo"<script>window.open('add_park.php','_self')</script>";
@@ -23,7 +30,7 @@ $pwd=$_SESSION['pwd'];
 	$sql="select * from admin  ";//where park='$park'
 	$result=$con->query($sql);
 		if($result->num_rows<=0)
-		{
+		{		//Sql update
 			$sql="insert into `admin`(`username`,`password`, `email`, `park`, `location`, `lat`, `lon`, `admin`, `slots`) values ('$username','$password','$email','$park','$location','$lat','$long','$slots')";
 				if($con->query($sql)===true)
 				{
@@ -47,7 +54,7 @@ $pwd=$_SESSION['pwd'];
                 $_SESSION['name']=$name;
                 $_SESSION['pwd']=$pwd;
             } else        
-{
+{//Authenticity check
 	echo "<script>
 				
 				window.location.href='add_park.php';
