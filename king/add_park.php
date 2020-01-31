@@ -1,7 +1,14 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		add_park.php add dashboard where the management add the parking
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
-$name=$_SESSION['name'];
+$name=$_SESSION['name'];///value from session
 $pwd=$_SESSION['pwd'];
 ?>
 <!DOCTYPE html>
@@ -75,6 +82,7 @@ $pwd=$_SESSION['pwd'];
                     <!-- Website Overview -->
                     <div class="panel panel-default">
                         <div class="panel-body">
+<!--Add Parking form 				 -->
                         <form class="text-monospace text-light bg-dark border-dark shadow-sm pulse animated" action="ad_up_pk.php" method="POST">
                     <div class="form-group"><label for="name">Username</label>
                     <input name="username" class="form-control item" type="text" id="name" required="required" placeholder="Username"></div>
@@ -112,7 +120,7 @@ $pwd=$_SESSION['pwd'];
                 $_SESSION['pwd']=$pwd;
             } else        
 {
-	echo "<script>
+	echo "<script>//Authenticity
 				
 				window.location.href='../k_log.php';
 				</script>";
