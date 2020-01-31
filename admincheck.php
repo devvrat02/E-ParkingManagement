@@ -1,17 +1,23 @@
 <?php
-
+           /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 	admincheck.php comes though	-admin_login  Admin login Page 
+                            *
+                            */
 session_start();
 require 'mysqlConnect.php';
-		$a6=$_POST["username"];
-		$a7=$_POST["password"];
+		$a6=$_POST["username"];//For username
+		$a7=$_POST["password"];//for password
 	try{
 		
-		$sql="select * from admin where username='$a6' and password ='$a7'";
-		$result = $con->query($sql);
+		$sql="select * from admin where username='$a6' and password ='$a7'";// sql query 
+		$result = $con->query($sql);	//execute sql 
 		if($result===false)
 		{
 
-			die(mysqli_error($con));
+			die(mysqli_error($con)); //close connection
 		}
 		if($result->num_rows > 0)
 		{
@@ -45,13 +51,13 @@ require 'mysqlConnect.php';
 		}
 	}catch(Exception $e)
 	{
-		echo $e->getMessage();
+		echo $e->getMessage(); //show error of try block
 	}
 	$con->close();
 				
 			echo "<script>
 				alert('Your Email or Password Does Not Matched Please Enter Valid Email or Password');
 				window.location.href='admin_login.php';
-				</script>";
+				</script>";//jump to admin login page
 			
 ?>	
