@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal 
+                            * Filename: 		book.php for booking
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 ?>
@@ -138,6 +145,7 @@ $_SESSION['psd']=$b;}
     <footer id="footer">
         <p>E-Parking</p>
     </footer>
+<!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
@@ -148,7 +156,7 @@ $b=$_SESSION['name'];
 if(!($a!=null &&$b!=null))         
 {
 	echo "<script>
-				
+	//for authenticity			
 				window.location.href='../login.php';
 				</script>";
 			
