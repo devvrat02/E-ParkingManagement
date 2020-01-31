@@ -1,3 +1,12 @@
+<?php
+           /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		contact-us.php
+                            *
+                            */
+?>
 <!DOCTYPE html>
 <html>
 
@@ -35,6 +44,7 @@
             <p>E-Parking Management</p>
         </div>
     </footer>
+<!--  Script    -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
