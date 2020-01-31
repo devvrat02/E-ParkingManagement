@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		index.php king dashboard
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $name=$_SESSION['name'];
