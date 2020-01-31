@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		park.php //List the parkings of the king
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $name=$_SESSION['name'];
