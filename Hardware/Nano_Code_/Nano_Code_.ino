@@ -1,4 +1,13 @@
 // defines pins numbers                   
+ /*
+                            *
+                            * Project Name: 	E-Parking Management
+                            * Author List: 		Chetan Malviya , Manas Solanki
+                            *	Filename:   Nano_Code_.ino
+                            * Functions: 		sensor1,sensor2,sensor3,sensor4
+                            * Global Variables:	trigPin1--trigPin4,echoPin1--echoPin4,led1--led4
+                            *                   U1--U4,  duration1--duration4,distance1--distance4
+                            */
 
 const int trigPin1 = 11;  //D11
 const int echoPin1 = 12;  //D12
@@ -62,6 +71,13 @@ void setup()
   delay(1000);
   Serial.println("1," + U1 + ',' + U2 + ',' + U3 + ',' + U4 + '*'); //Status of Ultrasonic sensors in format( 1,1,0,1,1) 
 }
+                            /*
+                            *
+                            * Function Name: 	sensor1,sensor2,sensor3,sensor4
+                            * Input: 		No Inputs only use global variables and read the ultrasonic sensor value
+                            * Output: 		No return type but change the value of global variables
+                            * Logic: 		Calculate the distance of the slot and give result that car is present or not
+                            */
 void sensor1()
 {
   digitalWrite(trigPin1, LOW);
@@ -219,19 +235,19 @@ void loop()
         Ledstatus4 = readString.substring(ind4+1);
         //Serial.println(Ledstatus4);
         readString=""; 
-        if (Ledstatus1.toInt()==1)
+        if (Ledstatus1.toInt()==1)///On/off the led of sensor 1
           digitalWrite(led1, HIGH);
         else
           digitalWrite(led1, LOW);
-        if (Ledstatus2.toInt()==1)
+        if (Ledstatus2.toInt()==1)///On/off the led of sensor 2
           digitalWrite(led2, HIGH);
         else
           digitalWrite(led2, LOW);
-        if (Ledstatus3.toInt()==1)
+        if (Ledstatus3.toInt()==1)///On/off the led of sensor 3
           digitalWrite(led3, HIGH);
         else
           digitalWrite(led3, LOW);
-        if (Ledstatus4.toInt()==1)
+        if (Ledstatus4.toInt()==1)///On/off the led of sensor 4
           digitalWrite(led4, HIGH);
         else
           digitalWrite(led4, LOW);
