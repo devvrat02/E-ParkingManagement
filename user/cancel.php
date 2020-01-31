@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal 
+                            * Filename: 		cancel.php
+                            * For the database work
+                            */
 session_start();
 require '../mysqlConnect.php';
 $a=$_POST["email"];
