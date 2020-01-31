@@ -9,14 +9,14 @@ user dashboard {
 		bookparking		bookparking				book.php          //book parking according to parking status
 		location/path		location/path			path.php  	    //parking location 
 		}
------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 admin login				admin_login.php-admincheck.php to the 
 admin dashboard       admin/index.php		
 		your parking location	admindashboard		      Show the parking location that are in the database 
 		vehicals		vehicals.php                      //show details	sh_details.php			slots are book /status empty status			
    	rates				rate.php //Change the price of the parking -upprice.php 
-		
----------------------------------------------------------------------------------------------------------------------------------------------
+	
+------------------------------------------------------------------------------------------------------------------------------
 
 king login //prompt js 			  -kings.php 
 king dashboard                -king/index.php					        	
