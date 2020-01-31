@@ -1,5 +1,13 @@
 <?php
 
+           /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya
+                            * Filename: 		k_check.php --Check the king is valid or  not
+                            *
+            */
+
 session_start();
 require 'mysqlConnect.php';
 		$a6=$_POST["username"];
@@ -26,7 +34,7 @@ require 'mysqlConnect.php';
 				$_SESSION['park']=$row["park"];
 				$_SESSION['tbook']=$row["tbook"];
 				$con->close();
-				header("location:king/");
+				header("location:king/"); //jump to king login page
 				exit;
 				
 			}
