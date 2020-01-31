@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal 
+                            * Filename: 		parking.php for booking the slots
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $a=$_SESSION["emal"];
