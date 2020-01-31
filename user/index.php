@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal 
+                            * Filename: 		index.php user dashboard
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 ?>
@@ -111,7 +118,7 @@ $b=$_SESSION['name'];
 </body>
 </html>
 <?php    if(!($a!=null &&$b!=null))         
-{
+{ //By this that no other one can login
 	echo "<script>
 				
 				window.location.href='../login.php';
