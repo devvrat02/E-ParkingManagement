@@ -1,10 +1,20 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal
+                            * Filename: 		del_pk.php  Delete the parking 
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $name=$_SESSION['name'];
 $pwd=$_SESSION['pwd'];
 ?>
 <?php	
+// The sql work done here
+
+
   $park=$_POST['park'];
 
 	$sql="select * from admin where  ";
@@ -24,7 +34,7 @@ $pwd=$_SESSION['pwd'];
 		}
 		else{
 			echo "<script>alert('you are already registered please log in')</script>";
-      echo"<script>window.open('login.php','_self')</script>";
+      echo"<script>window.open('../login.php','_self')</script>";
 		exit();
 		}
 
