@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal
+                            * Filename: 		del_park delete parking
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 $name=$_SESSION['name'];
@@ -41,7 +48,7 @@ $pwd=$_SESSION['pwd'];
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Welcome,<?=$name?></a></li>
-                    <li><a href="login.html">Logout</a></li>
+                    <li><a href="../logout.html">Logout</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
