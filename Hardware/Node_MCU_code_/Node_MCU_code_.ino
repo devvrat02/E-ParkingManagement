@@ -1,17 +1,26 @@
+ /*
+                            *
+                            * Project Name: 	E-Parking Management
+                            * Author List: 		Chetan Malviya , Manas Solanki
+                            *	Filename:   Node_MCU_code_.ino
+                            * Functions: 		sensor1,sensor2,sensor3,sensor4
+                            * Global Variables:	ssid,pass,ip,led1--led4,readString
+                            *                   U1--U4,
+                            */
 #include <MySQL_Connection.h>
 #include <MySQL_Cursor.h>
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include<String.h>
 #include <SoftwareSerial.h>
-
+                                   ////////////////****Global variable Declaration starts from here 
 SoftwareSerial mySerial(D0, D1); // RX, TX
 char ssid[] = "";                 // Network Name
 char pass[] = "";                 // Network Password
 byte mac[6];
-WiFiServer server(80);
-IPAddress ip;
-String  U1 = "";
+WiFiServer server(80);    //wifi server 
+IPAddress ip;     //ip address for node mcu
+String  U1 = "";      //status of cars
 String  U2 = "";
 String  U3 = "";
 String  U4 = "";
@@ -27,15 +36,15 @@ String Ledstatus2;
 String Ledstatus3;
 String Ledstatus4;
 String flag;
-String Ledstat1, Ledstat2, Ledstat3, Ledstat4;
-WiFiClient client;
+String Ledstat1, Ledstat2, Ledstat3, Ledstat4;///Led Status
+WiFiClient client;    //for wifi connection
 MySQL_Connection conn((Client *)&client);   //Sql connection
 //DNSClient dns_client;
 char conn_database[] = "USE";          //Database name Use Database
-char updaten_SQL[] = "Update demo1 Set status=\'available\' %s";
-char updatey_SQL[] = "Update demo1 Set status=\'unavailable\' %s";
-char getvalue[] = "SELECT * FROM demo1 %s";
-char A[] = "where slot= \'A\'";
+char updaten_SQL[] = "Update demo1 Set status=\'available\' %s"; //Sql query for changing the value
+char updatey_SQL[] = "Update demo1 Set status=\'unavailable\' %s";///
+char getvalue[] = "SELECT * FROM demo1 %s"; //Sql query for fetch the data
+char A[] = "where slot= \'A\'";// Selecting the slots
 char B[] = "where slot= \'B\'";
 char C[] = "where slot= \'C\'";
 char D[] = "where slot= \'D\'";
@@ -44,7 +53,7 @@ IPAddress server_addr(0,0,0,0); //db sserver address
 char user[] = "";           // MySQL user
 char password[] = "";       // MySQL password
 
-char query[50];
+char query[50];//query that we need to use for cloud connection
 int led1, led2, led3, led4;
 int stat1, stat2, stat3, stat4;
 void setup()
@@ -61,7 +70,7 @@ void setup()
   mySerial.println(ssid);
   WiFi.begin(ssid, pass);
 
-  while (WiFi.status() != WL_CONNECTED) {
+  while (WiFi.status() != WL_CONNECTED) {///Connecting to the Ethernet
     delay(200);
     mySerial.print(".");
   }
@@ -69,7 +78,7 @@ void setup()
   mySerial.println("");
   mySerial.println("WiFi Connected:");
 
-  WiFi.macAddress(mac);
+  WiFi.macAddress(mac);         //Showing the mac address
   mySerial.print("MAC: ");
   mySerial.print(mac[5], HEX);
   mySerial.print(":");
@@ -84,7 +93,7 @@ void setup()
   mySerial.println(mac[0], HEX);
   mySerial.println("");
   mySerial.print("Assigned IP: ");
-  mySerial.print(WiFi.localIP());
+  mySerial.print(WiFi.localIP());///Showing ip address
   mySerial.println("");
 
   mySerial.println("Connecting to database");
@@ -93,7 +102,7 @@ void setup()
   ////dns_client.getHostByName(host, server_addr);
   mySerial.println(server_addr);
 
-  while (conn.connect(server_addr, 3306, user, password) != true) {
+  while (conn.connect(server_addr, 3306, user, password) != true) {///Establishing connection from cloud
     delay(200);
     mySerial.print ( "." );
   }
@@ -102,17 +111,25 @@ void setup()
   sprintf(query, conn_database );
   mySerial.println("Connecting Database");
   mySerial.println(query);
-  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn); //Establishing connection
-  cur_mem->execute(query);
+  MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn); //Establishing connection //connection query to database
+  cur_mem->execute(query);              //Execute the sql query
   sprintf(query, conn_database);                        //Selecting Database
   cur_mem->execute(query);
   delete cur_mem;
 }
-
+  /*
+                            *
+                            * Function Name: 	sensor1,sensor2,sensor3,sensor4
+                            * Input: 		use global variables as input
+                            * Output: 		changes the value of global variable 
+                            *                 And that fuction change the value of led to 1 /0
+                                          1=On      0=Off
+                            *
+                            */
 void sensor1()
-{ MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
-    sprintf(query, getvalue, A);
-  cur_mem->execute(query);
+{ MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);//Established Connection
+    sprintf(query, getvalue, A);                //Update the value of slot a
+  cur_mem->execute(query);            //execute the query
   column_names *cols = cur_mem->get_columns();
   mySerial.println();
   // Read the rows and print them
@@ -120,7 +137,7 @@ void sensor1()
   do {
     row = cur_mem->get_next_row();
     if (row != NULL) {
-      if (row->values[2] != "booked") {
+      if (row->values[2] != "booked") {   ///Check that the slot is booked or not 
   // Deleting the cursor also frees up memory used
     if (U1.toInt() == 1)
     {
@@ -157,7 +174,7 @@ void sensor2()
   do {
     row = cur_mem->get_next_row();
     if (row != NULL) {
-      if (row->values[2] != "booked") {
+      if (row->values[2] != "booked") {///Check that the slot is booked or not
   // Deleting the cursor also frees up memory used
     if (U1.toInt() == 1)
     {
@@ -195,7 +212,7 @@ void sensor3()
   do {
     row = cur_mem->get_next_row();
     if (row != NULL) {
-      if (row->values[2] != "booked") {
+      if (row->values[2] != "booked") {///Check that the slot is booked or not
   // Deleting the cursor also frees up memory used
     if (U1.toInt() == 1)
     {
@@ -231,7 +248,7 @@ void sensor4()
   do {
     row = cur_mem->get_next_row();
     if (row != NULL) {
-      if (row->values[2] != "booked") {
+      if (row->values[2] != "booked") {///Check that the slot is booked or not
   // Deleting the cursor also frees up memory used
     if (U1.toInt() == 1)
     {
@@ -299,7 +316,7 @@ void loop()
         Serial.println("0," + Ledstatus1 + ',' + Ledstatus2 + ',' + Ledstatus3 + ',' + Ledstatus4 + '*'); //Status of led sensor(0,Ledstatus1,Ledstatus2,Ledstatus3,Ledstatus4*)
         //       Serial.println("0,1,1,1,1*"); //TO NAN0
         mySerial.println("0," + Ledstatus1 + ',' + Ledstatus2 + ',' + Ledstatus3 + ',' + Ledstatus4 + '*');
-        delay(2000);
+        //Sending this to the node mcu for on the light
 
       }
       else
