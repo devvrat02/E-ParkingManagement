@@ -1,4 +1,11 @@
 <?php
+ /*
+                            *
+                            * Project Name: 	E-parking Management
+                            * Author List: 		Chetan Malviya,Siddharth Khandelwal 
+                            * Filename: 		path.php For route of the parking where the user book the slot
+                            *
+                            */
 session_start();
 require '../mysqlConnect.php';
 ?>
