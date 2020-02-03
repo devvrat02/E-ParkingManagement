@@ -49,12 +49,12 @@
         </div>
         </div>
     </nav>
-<!--  Contact us    -->
     <main class="page landing-page">
         <section class="bg-dark border-light clean-block clean-hero" style="color:rgba(9, 162, 255, 0.85);" id="home">
             <div class="text">
                 <h2 data-bs-hover-animate="tada">Book Your Parking</h2>
-                <p>Check whether parking is available</p><a href="login.php"><button class="btn btn-outline-light btn-lg" type="button"  data-bs-hover-animate="rubberBand">Book now</button></a></div>
+                <p>Check whether parking is available</p><a href="login.php"><button class="btn btn-outline-light btn-lg" type="button"  data-bs-hover-animate="rubberBand">Book now</button></a>
+              </div>
         </section>
         <section class="text-light bg-dark clean-block clean-info dark" id="info">
             <div class="container">
