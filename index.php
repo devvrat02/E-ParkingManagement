@@ -1,10 +1,10 @@
-           /*
+<!--            /*
                             *
                             * Project Name: 	E-parking Management
                             * Author List: 		Chetan Malviya
                             * Filename: 		index.php
                             *
-            */
+            */ -->
 <!DOCTYPE html>
 <html>
 
