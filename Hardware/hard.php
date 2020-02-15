@@ -1,5 +1,5 @@
 <?php
-require 'mysqlConnect.php';
+require '../mysqlConnect.php';
 ?>
 <?php
 $parking="demo1";
