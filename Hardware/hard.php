@@ -3,10 +3,10 @@ require '../mysqlConnect.php';
 ?>
 <?php
 $parking="demo1";
-$slot1 =$_GET['stat1'];
-$slot2 =$_GET['stat2'];
-$slot3 =$_GET['stat3'];
-$slot4 =$_GET['stat4'];
+$slot1 =$_POST['stat1'];
+$slot2 =$_POST['stat2'];
+$slot3 =$_POST['stat3'];
+$slot4 =$_POST['stat4'];
 $sql="select * from $parking ";
             $result=$con->query($sql);
 		    $row=$result->fetch_assoc();
