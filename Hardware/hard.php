@@ -1,5 +1,5 @@
 <?php
-require '../mysqlConnect.php';
+require 'sqlconn.php';
 ?>
 <?php
 $parking="demo1";
@@ -90,6 +90,12 @@ else
         $led4=1;
 } 
 
+$output="0".",".$led1.",".$led2.",".$led3.",".$led4."*";
 // mySerial.println("0," + Ledstatus1 + ',' + Ledstatus2 + ',' + Ledstatus3 + ',' + Ledstatus4 + '*');
-echo "0".",".$led1.",".$led2.",".$led3.",".$led4."*";
+// echo "0".",".$led1.",".$led2.",".$led3.",".$led4."*";
+	/*echo '<pre>';
+		print_r($json_array);
+		echo '</pre>';*/
+	echo $output;
+
 ?>
