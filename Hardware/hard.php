@@ -1,8 +1,8 @@
 <?php
-require 'sqlconn.php';
+require './mysqlConnect.php';
 ?>
 <?php
-$parking="demo1";
+$parking=$_POST['park'];
 $slot1 =$_POST['stat1'];
 $slot2 =$_POST['stat2'];
 $slot3 =$_POST['stat3'];
