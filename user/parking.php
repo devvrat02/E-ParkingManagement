@@ -39,8 +39,8 @@ if($result->num_rows==0)
 		{
 			$st=$row["status"];
 			$sl=$row["slot"];
-			$sb=$row["book"];
-			if($st=="available"&& $sb=="available")
+// 			$sb=$row["book"];
+			if($st=="available")
 			{
 			echo "<tr><td>Parking Slot<input type='radio' name='slot' value='$sl'>".$sl."</td></tr>";
 			}
