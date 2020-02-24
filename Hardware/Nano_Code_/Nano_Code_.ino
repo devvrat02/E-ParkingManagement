@@ -9,6 +9,8 @@
                             *                   U1--U4,  duration1--duration4,distance1--distance4
                             */
 
+// defines pins numbers                   
+
 const int trigPin1 = 11;  //D11
 const int echoPin1 = 12;  //D12
 const int trigPin2 = 9;  //D10
@@ -30,6 +32,7 @@ long duration1;
 long duration2;
 long duration3;
 long duration4;
+int distance=12;
 int distance1;  
 int distance2;  
 int distance3;  
@@ -71,13 +74,6 @@ void setup()
   delay(1000);
   Serial.println("1," + U1 + ',' + U2 + ',' + U3 + ',' + U4 + '*'); //Status of Ultrasonic sensors in format( 1,1,0,1,1) 
 }
-                            /*
-                            *
-                            * Function Name: 	sensor1,sensor2,sensor3,sensor4
-                            * Input: 		No Inputs only use global variables and read the ultrasonic sensor value
-                            * Output: 		No return type but change the value of global variables
-                            * Logic: 		Calculate the distance of the slot and give result that car is present or not
-                            */
 void sensor1()
 {
   digitalWrite(trigPin1, LOW);
@@ -94,9 +90,9 @@ void sensor1()
   // Calculating the distance
   distance1= duration1*0.034/2;
   //Serial.print("Car slot 1 ");
-  if(distance1<11)
+  if(distance1<distance)
   { 
-    //digitalWrite(led1, HIGH);
+    digitalWrite(led1, HIGH);
     //Serial.println("Slot is alloted");
     //Serial.println(distance1);
     U1='1';
@@ -104,7 +100,7 @@ void sensor1()
   }
   else 
   {
-    //digitalWrite(led1, LOW);
+    digitalWrite(led1, LOW);
     //Serial.println("Slot is free");
    //Serial.println(distance1);
     U1='0';
@@ -128,16 +124,16 @@ void sensor2()
   // Calculating the distance
   distance2= duration2*0.034/2;
   //Serial.print("Car slot 2 ");
-  if(distance2<11)
+  if(distance2<distance)
   {
-    //digitalWrite(led2, HIGH); 
+    digitalWrite(led2, HIGH); 
     //Serial.println("Slot is alloted");
     //Serial.println(distance2);
     U2='1';
   }
   else
   {
-    //digitalWrite(led2, LOW);
+    digitalWrite(led2, LOW);
     //Serial.println("Slot is free");
     //Serial.println(distance2);
     U2='0';
@@ -160,9 +156,9 @@ void sensor3()
   // Calculating the distance
   distance3= duration3*0.034/2;
   //Serial.print("Car slot 3 ");
-  if(distance3<11)
+  if(distance3<distance)
   { 
-    //digitalWrite(led3, HIGH);
+    digitalWrite(led3, HIGH);
     //Serial.println("Slot is alloted");
     //Serial.println(distance3);
     U3='1';
@@ -170,7 +166,7 @@ void sensor3()
   else
   {
       
-    //digitalWrite(led3, LOW);
+    digitalWrite(led3, LOW);
     //Serial.println("Slot is free");
     //Serial.println(distance3);
     U3='0';
@@ -193,16 +189,16 @@ void sensor4()
   // Calculating the distance
   distance4= duration4*0.034/2;
   //Serial.print("Car slot 4 ");
-  if(distance4<11)
+  if(distance4<distance)
   { 
-    //digitalWrite(led4, HIGH);
+    digitalWrite(led4, HIGH);
     //Serial.println("Slot is alloted");
     //Serial.println(distance4);
     U4='1';
   }
   else 
   {
-    //digitalWrite(led4, LOW);  
+    digitalWrite(led4, LOW);  
     //Serial.println("Slot is free");
     //Serial.println(distance4);
     U4='0';
@@ -235,19 +231,19 @@ void loop()
         Ledstatus4 = readString.substring(ind4+1);
         //Serial.println(Ledstatus4);
         readString=""; 
-        if (Ledstatus1.toInt()==1)///On/off the led of sensor 1
+        if (Ledstatus1.toInt()==1)
           digitalWrite(led1, HIGH);
         else
           digitalWrite(led1, LOW);
-        if (Ledstatus2.toInt()==1)///On/off the led of sensor 2
+        if (Ledstatus2.toInt()==1)
           digitalWrite(led2, HIGH);
         else
           digitalWrite(led2, LOW);
-        if (Ledstatus3.toInt()==1)///On/off the led of sensor 3
+        if (Ledstatus3.toInt()==1)
           digitalWrite(led3, HIGH);
         else
           digitalWrite(led3, LOW);
-        if (Ledstatus4.toInt()==1)///On/off the led of sensor 4
+        if (Ledstatus4.toInt()==1)
           digitalWrite(led4, HIGH);
         else
           digitalWrite(led4, LOW);
