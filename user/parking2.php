@@ -10,6 +10,9 @@ session_start();
 require '../mysqlConnect.php';
 $a=$_SESSION["emal"];
 $b=$_SESSION["psd"];
+date_default_timezone_set('Asia/Kolkata');
+$max = date( 'h+1:i' );
+$min = date( 'h:i' );
 $sql="select * from parkingbook where email='$a'";
 $result=$con->query($sql);
 if($result->num_rows==0)
@@ -48,7 +51,7 @@ if($result->num_rows==0)
 		}
 		$_SESSION['page']=$check;
 		echo "<input type='hidden' value='$a' name='email'><input type='hidden' value='$b' name='password'><input type='hidden' value='$rat.Rs/Hour' name='rate'><input type='text' required='required' name='car' placeholder='Car Number'>";
-		echo "Entry  Time::<input type='time' required='required' name='entry' placeholder='Entry Time'>";
+		echo "Entry  Time::<input type='time' required='required' name='entry' min='$min' max='$max' placeholder='Entry Time'>";
 		echo "<button>Book Now</button></form></table>";
 
 	}
