@@ -46,7 +46,7 @@ if($result->num_rows==0)
 			$sb=$row["book"];
 			if($st=="available" && $sb=="available")
 			{
-			echo "<tr><td>Parking Slot<input type='radio' name='slot' value='$sl'>".$sl."</td></tr>";
+			echo "<tr><td>Parking Slot<input type='radio' name='slot'  required='required' value='$sl'>".$sl."</td></tr>";
 			}
 		}
 		$_SESSION['page']=$check;
