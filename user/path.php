@@ -107,13 +107,13 @@ $result=$con->query($sql);
                         </div><iframe allowfullscreen="" frameborder="0" width="100%" height="310" src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ"></iframe></div>
                 <div class="col">
                 <div class="col-md-3">
-                    <div class="well">
+<!--                     <div class="well">
                         <p>
                         <h4> Details :- </h4>
                         <h4> This is for providing the Shortest distance by that you can got to our parking where you book your slot</h4>
                         </p>
 
-                    </div>
+                    </div> -->
 
                     <div class="well">
                             
