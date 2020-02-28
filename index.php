@@ -100,7 +100,7 @@
                     <div class="col-sm-6 col-lg-4" >
                         <div class="card clean-card text-center">
                             <div class="card-body text-light bg-dark info">
-                                <h4 class="card-title">Mr. Sandeep Kumar Jain</h4>
+                                <h4 class="card-title">Mr Shiraz Husain</h4>
                                 <p class="card-text">Mentor<br></p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
