@@ -96,8 +96,8 @@ $b=$_SESSION['name'];
                 <div class="col-md-3">
                     <div class="well">
                         <p>
-                        <h4> Details :- </h4>
-                        <h4> This progam build for make for providing the parking to the normal user at perfect system </h4>
+<!--                         <h4> Details :- </h4> -->
+<!--                         <h4> This progam build for make for providing the parking to the normal user at perfect system </h4> -->
                         
                         </p>
 
