@@ -75,9 +75,9 @@ $d=$_SESSION['prk'];
                 <span class="caret"></span>
               </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a type="button" data-toggle="modal" data-target="#addPage">Stat</a></li>
-                            <li><a href="#">give Parking</a></li>
-                            <li><a href="#">clear Parking</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="vehicles.php">Status</a></li>
+                            <li><a href="#">Give Slot</a></li>
+                            <li><a href="Clear.php">Clear Slot</a></li>
                         </ul>
                     </div>
                 </div>
