@@ -11,16 +11,15 @@ session_start();
 require '../mysqlConnect.php';
 $a=$_POST["slot"];
 $b=$_SESSION['prk'];
-$sql="update $b set status='available',user=' ',In_time=' ',exit_time=' ' where slot='$slot'";
+$sql="update $b set status='available',user=' ',In_time=' ',exit_time=' ' where slot='$a'";
 if($a){if($con->query($sql)===true)
 {
     echo "Data inserted successfilly";
-    $_SESSION['rate']=$a;
 }else{
     echo "error ".$sql."".$con->error;
 }
 
-$sql="delete from parkingbook where slots='$slot',parking='$b'";
+$sql="delete from parkingbook where slots='$a',parking='$b'";
 $con->query($sql);
  echo "<script>alert('Data edit succesfully')</script>";
 header("location:clear.php");
