@@ -71,9 +71,9 @@ $rate=$_SESSION['rate'];
                 <span class="caret"></span>
               </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a type="button" data-toggle="modal" data-target="#addPage">Status</a></li>
-                            <li><a href="#">give Parking</a></li>
-                            <li><a href="#">clear Parking</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="vehicle.php">Status</a></li>
+<!--                             <li><a href="#">give Parking</a></li> -->
+                            <li><a href="clear">Clear Slot</a></li>
                         </ul>
                     </div>
                 </div>
