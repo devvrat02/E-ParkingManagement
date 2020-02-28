@@ -20,10 +20,9 @@ if($a){if($con->query($sql)===true)
     echo "error ".$sql."".$con->error;
 }
 
-$sql="delete from parkingbook where slot='$slot',parking='$b'";
+$sql="delete from parkingbook where slots='$slot',parking='$b'";
 $con->query($sql);
-
-
+ echo "<script>alert('Data edit succesfully')</script>";
 header("location:clear.php");
 exit;
 }
