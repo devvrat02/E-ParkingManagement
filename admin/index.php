@@ -77,7 +77,7 @@ $d=$_SESSION['prk'];
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                             <li><a type="button" data-toggle="modal" data-target="vehicles.php">Status</a></li>
                             <li><a href="#">Give Slot</a></li>
-                            <li><a href="Clear.php">Clear Slot</a></li>
+                            <li><a href="clear.php">Clear Slot</a></li>
                         </ul>
                     </div>
                 </div>
