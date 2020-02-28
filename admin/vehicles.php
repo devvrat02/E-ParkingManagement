@@ -69,9 +69,9 @@ $d=$_SESSION['prk'];
                 <span class="caret"></span>
               </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a type="button" data-toggle="modal" data-target="#addPage">Status</a></li>
-                            <li><a href="#">give Parking</a></li>
-                            <li><a href="#">clear Parking</a></li>
+                            <li><a type="button" data-toggle="modal" data-target="vehicles.php">Status</a></li>
+<!--                             <li><a href="#">give Parking</a></li> -->
+                            <li><a href="clear.php">Clear Slot</a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ $d=$_SESSION['prk'];
                         <a href="rates.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Rates </a>
                     </div>
 
-                    <div class="well">
+<!--                     <div class="well">
                         <h4>Parking Status</h4>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -110,7 +110,7 @@ $d=$_SESSION['prk'];
                                 40%
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-9">
             <!-- Website Overview -->
