@@ -20,7 +20,7 @@ if($result->num_rows>0)
 		$slot=$row["slots"];
 		
 
-		$sql="update $park set status='available',user='null',In_time='null',exit_time='null' where slot='$slot'";
+		$sql="update $park set status='available',user=' ',In_time=' ',exit_time=' ' where slot='$slot'";
 			echo $sql;
 		if($con->query($sql)===true)
 		{
