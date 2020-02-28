@@ -35,7 +35,7 @@ if($result->num_rows==0)
 				{
 					$rat=$row["rate"];
 					echo "<h6>".$row['parkname']."</h6>";
-					echo "<h6>".$row['rate'].".Rs/Day</h6>";
+					echo "<h6>".$row['rate'].".Rs/Hours</h6>";
 				}
 			}
 		}
