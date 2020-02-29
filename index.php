@@ -21,8 +21,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
 </head>
+
 <body>
-<!-- Nav menu  -->
+    <!-- Nav menu  -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container"><a class="navbar-brand logo" href="admin_login.php">Epark</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -37,8 +38,7 @@
     </nav>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar" data-aos="fade">
         <div class="container"><a class="navbar-brand pulse animated infinite logo" href="admin_login.php">E-parking</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item item" role="presentation"><a class="nav-link active" href="#home" target="_top" data-bs-hover-animate="swing">HOME</a></li>
                     <li class="nav-item item" role="presentation"><a class="nav-link active" href="login.php" data-bs-hover-animate="pulse">Login/Sign Up</a></li>
@@ -46,7 +46,7 @@
                     <li class="nav-item item" role="presentation"><a class="nav-link active" href="#about" data-bs-hover-animate="pulse">ABOUT</a></li>
                     <li class="nav-item item" role="presentation"><a class="nav-link active" href="contact-us.php" data-bs-hover-animate="pulse">CONTACT US</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <main class="page landing-page">
@@ -54,7 +54,7 @@
             <div class="text">
                 <h2 data-bs-hover-animate="tada">Book Your Parking</h2>
                 <p>Check whether parking is available</p><a href="login.php"><button class="btn btn-outline-light btn-lg" type="button"  data-bs-hover-animate="rubberBand">Book now</button></a>
-              </div>
+            </div>
         </section>
         <section class="text-light bg-dark clean-block clean-info dark" id="info">
             <div class="container">
@@ -63,15 +63,14 @@
                     <p>The application is built with an ultimate goal of contributing our efforts towards the development of cities and a step towards smart cities project.&nbsp;</p>
                 </div>
                 <div class="row align-items-center">
-<!--  Google Map -->
+                    <!--  Google Map -->
                     <div class="col-md-6"><iframe allowfullscreen="" frameborder="0" width="100%" height="400" src="https://www.google.com/maps/d/embed?mid=1SbKn8SvXZhy3zvrCL7lvKjwwhyl4shXJ"></iframe></div>
-                    <div
-                        class="col-md-6">
+                    <div class="col-md-6">
                         <h3>E-parking Management</h3>
                         <div class="getting-started-info">
                             <p>Parking owners can contact for collaboration</p>
                         </div><a href="contact-us.php"><button class="btn btn-outline-primary btn-lg" type="button" data-bs-hover-animate="tada" >Contact us</button></a></div>
-            </div>
+                </div>
             </div>
         </section>
         <section class="text-light bg-dark clean-block features">
@@ -82,45 +81,46 @@
                 </div>
             </div>
         </section>
-<!--  Team info        -->
+        <!--  Team info        -->
         <section class="text-light bg-dark clean-block about-us" id="about">
-            <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info">About Us</h2>
-                    <p>This project is build in the criteria of Smart City</p>
-                </div>
-                <div class="card clean-card text-center">
-                    <div class="card-body text-light bg-dark border-dark shadow-lg info">
-                        <h4 class="card-title">Chetan Malviya</h4>
-                        <p class="card-text">Team Leader<br> Web designer,Web developer&nbsp;<br></p>
-                        <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+            <div class="container bg-dark border-dark">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avt1.jpg">
+                            <div class="card-body bg-dark info">
+                                <h4 class="card-title"><strong>Chetan Malviya</strong><br></h4>
+                                <p class="card-text">Team Leader<br></p>
+                                <p class="card-text">Web designer,Web developer<br></p>
+                                <div class="flash animated infinite icons"><a href="https://www.facebook.com/chetan.malviya.9256"><i class="icon-social-facebook"></i></a><a href="https://www.instagram.com/_devvrat1"><i class="icon-social-instagram"></i></a><a href="https://twitter.com/a_devvrat"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar2.jpg">
+                            <div class="card-body bg-dark info">
+                                <h4 class="card-title"><strong>Mr. Sandeep Kumar Jain</strong><br><br></h4>
+                                <p class="card-text">Mentor<br></p>
+                                <div class="flash animated infinite icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-sm-6 col-lg-4" >
-                        <div class="card clean-card text-center">
-                            <div class="card-body text-light bg-dark info">
-                                <h4 class="card-title">Mr Shiraz Husain</h4>
-                                <p class="card-text">Mentor<br></p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar3.jpg">
+                            <div class="card-body bg-dark info">
+                                <h4 class="card-title"><strong>Siddharth Khandelwal</strong><br></h4>
+                                <p class="card-text">Survey Handler,Representative.<br></p>
+                                <div class="flash animated infinite icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4">
-                        <div class="card clean-card text-center">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar4.jpg">
                             <div class="card-body bg-dark info">
-                            <h4 class="card-title">Siddharth Khandelwal</h4>
-                                <p class="card-text">Survey Handler,Web developer<br><br></p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card clean-card text-center">
-                            <div class="card-body bg-dark info">
-                                <h4 class="card-title">Manas Solanki</h4>
-                                <p class="card-text">Hardware Designer.</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                                <h4 class="card-title"><strong>Manas Solanki</strong><br></h4>
+                                <p class="card-text">Hardware Designer.<br></p>
+                                <div class="flash animated infinite icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -128,13 +128,13 @@
             </div>
         </section>
     </main>
-<!-- King login     -->
+    <!-- King login     -->
     <footer class="page-footer dark">
         <div class="footer-copyright">
             <a href="k_log.php">Eparking Management</a>
         </div>
     </footer>
-<!-- Script     -->
+    <!-- Script     -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
@@ -143,4 +143,5 @@
     <script src="assets/js/bs-animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
 </body>
+
 </html>
