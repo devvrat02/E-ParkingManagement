@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4">
-                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar2.jpg">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar.jpg">
                             <div class="card-body bg-dark info">
                                 <h4 class="card-title"><strong>Mr. Sandeep Kumar Jain</strong><br><br></h4>
                                 <p class="card-text">Mentor<br></p>
