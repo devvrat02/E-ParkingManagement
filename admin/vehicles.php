@@ -126,14 +126,15 @@ $d=$_SESSION['prk'];
                 $result=$con->query($sql);
                 if($result->num_rows>0)
                 {
-                    echo "<table class='table table-striped table-hover'><tr><th> Slot </th><th> Status </th><th> User </th><th> In_time </th><th> exit_time </th></tr>";
+                    echo "<table class='table table-striped table-hover'><tr><th> Slot </th><th> Booking </th><th> Status </th><th> User </th><th> In_time </th><th> exit_time </th></tr>";
                     while($row=$result->fetch_assoc())
                     {   $st=$row["status"];
+		     	$sb=$row["book"];
                         $sl=$row["slot"];
                         $us=$row["user"];
                         $it=$row["In_time"];
                         $et=$row["exit_time"];
-                        echo "<tr><th>$sl</th><th>$st</th><th>$us</th><th>$it</th><th>$et</th></tr>";
+                        echo "<tr><th>$sl</th><th>$sb</th><th>$st</th><th>$us</th><th>$it</th><th>$et</th></tr>";
                     } }else   echo "0 results";
                      
             } ?>
