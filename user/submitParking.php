@@ -32,9 +32,9 @@ $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parkin
 				}
 				
 				
-				if($check=="demo1")
+				if($check)
 				{
-					$sql="update demo1 set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
+					$sql="update $check set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
 					if($con->query($sql)===true)
 					{
 						echo "Data inserted successfilly";
@@ -44,18 +44,18 @@ $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parkin
 					}
 
 				}
-				else if($check=="demo2")
-				{
-					$sql="update demo1 set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
-					if($con->query($sql)===true)
-					{
-						echo "Data inserted successfilly";
-					}else
-					{
-						echo "error ".$sql."".$con->error;
-					}
+// 				else if($check=="demo2")
+// 				{
+// 					$sql="update demo1 set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
+// 					if($con->query($sql)===true)
+// 					{
+// 						echo "Data inserted successfilly";
+// 					}else
+// 					{
+// 						echo "error ".$sql."".$con->error;
+// 					}
 
-				}
+// 				}
 				
 				$con->close();
 			header("location:index.php");
