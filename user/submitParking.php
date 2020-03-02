@@ -8,11 +8,20 @@
                             */
 session_start();
 require '../mysqlConnect.php';
+
+function timeinc($a)
+{$timestamp = strtotime($a) + 60*60;
+
+$time = date('H:i', $timestamp);
+
+return $time;}
+
 $a=$_POST["email"];
 $b=$_POST["password"];
 $c=$_POST["car"];
 $d=$_POST["entry"];
-$e=$_POST["entry"];
+$e=timeinc($d);//exit
+
 $f=$_POST["slot"];
 $g=$_POST["rate"];
 $check=$_SESSION['page'];
