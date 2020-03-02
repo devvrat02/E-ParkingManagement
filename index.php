@@ -111,7 +111,7 @@
                             <div class="card-body bg-dark info">
                                 <h4 class="card-title"><strong>Siddharth Khandelwal</strong><br></h4>
                                 <p class="card-text">Survey Handler,Representative.<br></p>
-                                <div class="flash animated infinite icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                                <div class="flash animated infinite icons"><a href="https://www.facebook.com/siddharth.khandelwal8435"><i class="icon-social-facebook"></i></a><a href="https://www.instagram.com/khandelwal20sid"><i class="icon-social-instagram"></i></a><a href="https://twitter.com/Sid9849?s=08"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
                     </div>
