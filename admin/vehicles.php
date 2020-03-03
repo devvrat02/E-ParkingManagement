@@ -126,7 +126,7 @@ $d=$_SESSION['prk'];
                 $result=$con->query($sql);
                 if($result->num_rows>0)
                 {
-                    echo "<table class='table table-striped table-hover'><tr><th> Slot </th><th> Booking </th><th> User </th><th> In_time </th><th> exit_time </th></tr>";
+                    echo "<table class='table table-striped table-hover'><tr><th> Slot </th><th> Status </th><th> User </th><th> In_time </th><th> exit_time </th></tr>";
                     while($row=$result->fetch_assoc())
                     {   $st=$row["status"];
 		     	$sb=$row["book"];
