@@ -134,7 +134,15 @@ $d=$_SESSION['prk'];
                         $us=$row["user"];
                         $it=$row["In_time"];
                         $et=$row["exit_time"];
-                        echo "<tr><th>$sl</th><th>$sb</th><th>$us</th><th>$it</th><th>$et</th></tr>";
+		     
+		      if($us==" "&&$sb=="unavailable"){
+      $stat= "<p style='color:Red'>".$sb."</p>";
+    }
+else {
+  $stat =$sb;
+}
+		     
+                        echo "<tr><th>$sl</th><th>$stat</th><th>$us</th><th>$it</th><th>$et</th></tr>";
                     } }else   echo "0 results";
                      
             } ?>
