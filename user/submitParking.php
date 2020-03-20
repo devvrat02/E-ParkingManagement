@@ -7,14 +7,8 @@
                             *
                             */
 session_start();
+include '../assets/lib.php';
 require '../mysqlConnect.php';
-
-function timeinc($a)
-{$timestamp = strtotime($a) + 60*60;
-
-$time = date('H:i', $timestamp);
-
-return $time;}
 
 $a=$_POST["email"];
 $b=$_POST["password"];
@@ -53,19 +47,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parkin
 					}
 
 				}
-// 				else if($check=="demo2")
-// 				{
-// 					$sql="update demo1 set status='booked',user='$c',In_time='$d',exit_time='$e' where slot='$f'";
-// 					if($con->query($sql)===true)
-// 					{
-// 						echo "Data inserted successfilly";
-// 					}else
-// 					{
-// 						echo "error ".$sql."".$con->error;
-// 					}
-
-// 				}
-				
+stat_increment($check,$con);
 				$con->close();
 			header("location:index.php");
 			exit;
