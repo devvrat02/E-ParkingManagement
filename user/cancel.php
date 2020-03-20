@@ -7,6 +7,7 @@
                             * For the database work
                             */
 session_start();
+include '../assets/lib.php';
 require '../mysqlConnect.php';
 $a=$_POST["email"];
 $b=$_POST["password"];
@@ -31,6 +32,7 @@ if($result->num_rows>0)
 		}
 
 	}
+	stat_decrement($park,$con);
 	}
 				
 				
