@@ -32,10 +32,10 @@ if($result->num_rows>0)
 		}
 
 	}
-	stat_decrement($park,$con);
+
 	}
 				
-				
+	stat_decrement($park,$con);				
 				
 $sql="delete from parkingbook where email='$a' ";
 $con->query($sql);
