@@ -24,6 +24,7 @@ $d=$_SESSION['prk'];
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
 </head>
@@ -118,7 +119,7 @@ $d=$_SESSION['prk'];
               <div class="panel-heading main-color-bg">
                 <h3 class="panel-title">Users</h3>
               </div>
-              <div class="panel-body">
+              <div class="panel-body" ng-app="autoRefreshApp" ng-controller="autoRefreshController">
                     <?php    if($a!=null &&$b!=null){//Print the table of parking
                 $_SESSION['emal']=$a;
                 $_SESSION['psd']=$b;
