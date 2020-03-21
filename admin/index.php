@@ -22,7 +22,7 @@ $book= $result1->num_rows;
 $sql="SELECT * FROM `$d` WHERE book='unavailable'";
 $result1=$con->query($sql);
 $feed= $result1->num_rows;
-$sql="update `admin` set `book`=$book ,`feed`=$feed where park='$d';
+$sql="update `admin` set `book`=$book ,`feed`=$feed where park='$d'";
 $result1=$con->query($sql);
 ?>
 <!DOCTYPE html>
