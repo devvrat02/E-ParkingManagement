@@ -48,6 +48,8 @@ $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parkin
 
 				}
 stat_increment($check,$con);
+	 $sql="update `management` set tbook=tbook+1 where id=0";
+	$con->query($sql);
 				$con->close();
 			header("location:index.php");
 			exit;
