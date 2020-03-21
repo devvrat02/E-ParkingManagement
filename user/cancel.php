@@ -39,7 +39,8 @@ if($result->num_rows>0)
 				
 $sql="delete from parkingbook where email='$a' ";
 $con->query($sql);
-
+$sql="update `management` set tbook=tbook-1 where id=0";
+$con->query($sql);
 				
 				$con->close();
 	header("location:book.php");
