@@ -23,6 +23,8 @@ if($a){if($con->query($sql)===true)
 $sql="delete from parkingbook where slots='$a' AND parking='$b'";
 $con->query($sql);
        	stat_decrement($b,$con);
+       $sql="update `management` set tbook=tbook-1 where id=0";
+$con->query($sql);
        
  echo "<script>alert('Data edit succesfully')</script>";
        echo"<script>window.open('clear.php','_self')</script>";
