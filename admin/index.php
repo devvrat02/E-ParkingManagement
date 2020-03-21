@@ -14,8 +14,16 @@ $d=$_SESSION['prk'];
             $rate=$_SESSION['rate'];
 			$stat=$_SESSION['stat'];
 			$slots=$_SESSION['slots'];
-			$book=$_SESSION['book'];
-			$feed=$_SESSION['feed'];
+// 			$book=$_SESSION['book'];
+// 			$feed=$_SESSION['feed'];
+$sql="SELECT * FROM `$d` WHERE status='booked'";
+$result1=$con->query($sql);
+$book= $result1->num_rows;
+$sql="SELECT * FROM `$d` WHERE book='unavailable'";
+$result1=$con->query($sql);
+$feed= $result1->num_rows;
+$sql="update `admin` set `book`=$book ,`feed`=$feed where park='$d';
+$result1=$con->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
