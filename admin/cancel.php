@@ -8,6 +8,7 @@
                             *
                             */
 session_start();
+include '../assets/lib.php';
 require '../mysqlConnect.php';
 $a=$_POST["slot"];
 $b=$_SESSION['prk'];
@@ -21,6 +22,7 @@ if($a){if($con->query($sql)===true)
 
 $sql="delete from parkingbook where slots='$a' AND parking='$b'";
 $con->query($sql);
+       	stat_decrement($b,$con);
        
  echo "<script>alert('Data edit succesfully')</script>";
        echo"<script>window.open('clear.php','_self')</script>";
