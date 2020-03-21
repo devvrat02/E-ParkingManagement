@@ -10,6 +10,19 @@ session_start();
 require '../mysqlConnect.php';
 $name=$_SESSION['name'];
 $pwd=$_SESSION['pwd'];
+$sql ='Select * FROM admin';
+$result = $con->query($sql);	//execute sql 
+$tbook=0;
+if($result->num_rows > 0)
+{
+	while($row=$result->fetch_assoc())
+	{
+		$tbook=$tbook+$row['stat'];
+	}
+	
+}
+$sql="Update `management` SET `tbook`=$tbook where name='$name'";
+		$result = $con->query($sql);
 $sql="select * from management where name='$name'";
 		$result = $con->query($sql);
 		if($result===false)
