@@ -9,13 +9,13 @@
 session_start();
 include '../assets/lib.php';
 require '../mysqlConnect.php';
-
+include '../mail.php';
 $a=$_POST["email"];
 $b=$_POST["password"];
 $c=$_POST["car"];
 $d=$_POST["entry"];
 $e=timeinc($d);//exit
-
+$usr=$_SESSION['name'];
 $f=$_POST["slot"];
 $g=$_POST["rate"];
 $check=$_SESSION['page'];
@@ -29,6 +29,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parkin
 				if($con->query($sql)===true)
 				{
 					echo "Data inserted successfilly";
+					ticket($a,$usr,$check,$f,$d,$e,$g);
 				}else
 				{
 					echo "error ".$sql."".$con->error;
