@@ -14,8 +14,9 @@ try {
     print $response->statusCode() . "\n";
     print_r($response->headers());
     print $response->body() . "\n";
+    return "mail send";
 } catch (Exception $e) {
-    echo 'Caught exception: '. $e->getMessage() ."\n";
+    return 'Caught exception: '. $e->getMessage() ."\n";
 }
 }
 function ticket($username,$name,$parking,$slot,$intime,$extime,$cost){
