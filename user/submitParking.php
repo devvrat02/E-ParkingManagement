@@ -15,6 +15,7 @@ $b=$_POST["password"];
 $c=$_POST["car"];
 $d=$_POST["entry"];
 $e=timeinc($d);//exit
+$cnt="";
 $usr=$_SESSION['name'];
 $f=$_POST["slot"];
 $g=$_POST["rate"];
@@ -30,6 +31,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parkin
 				{
 					echo "Data inserted successfilly";
 					ticket($a,$usr,$check,$f,$d,$e,$g);
+					
 				}else
 				{
 					echo "error ".$sql."".$con->error;
