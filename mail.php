@@ -31,6 +31,7 @@ $content="
         </section>
     </body>
 ";
-     mailforward($username,$name,$content);
+   $value=  mailforward($username,$name,$content);
+echo $value;
 }
 ?>
