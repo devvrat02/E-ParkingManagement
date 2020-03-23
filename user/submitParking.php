@@ -30,7 +30,7 @@ $sql="insert into parkingbook(email,password,car_number,entry,slots,rates,parkin
 				if($con->query($sql)===true)
 				{
 					echo "Data inserted successfilly";
-					ticket($a,$usr,$check,$f,$d,$e,$g);
+					//ticket($a,$usr,$check,$f,$d,$e,$g);
 					
 				}else
 				{
