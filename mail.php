@@ -5,10 +5,9 @@ $email = new \SendGrid\Mail\Mail();
 $email->setFrom("epark@dev.in", "Manager");
 $email->setSubject("Ticket");
 $email->addTo($mnt, $usr);
-// $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
 $email->addContent(
     "text/html", $cont);
-$sendgrid = new \SendGrid('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');
+$sendgrid = new \SendGrid('API_KEY');
 try {
     $response = $sendgrid->send($email);
     print $response->statusCode() . "\n";
