@@ -1,7 +1,6 @@
 # E-ParkingManagement
-Eyic Team 611
 _______________________________________________________________________________________________________________________________________
-Websit Mappping                                           Demo Site:-https://e-parkingmanagement.herokuapp.com/
+Websit Mappping                                         
 front page                             index.php              
 user login /register			login.php/register.php		     -check_login.php //For checking the user is authentic
 user dashboard {															
