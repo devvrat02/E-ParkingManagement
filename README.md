@@ -1,6 +1,6 @@
 # E-ParkingManagement
 _______________________________________________________________________________________________________________________________________
-Websit Mappping                                         
+Website Mappping                                         
 front page                             index.php              
 user login /register			login.php/register.php		     -check_login.php //For checking the user is authentic
 user dashboard {															
@@ -25,5 +25,3 @@ king dashboard                -king/index.php
 				
 		create parking			--add_park.php			add parking in table with// name //slots //admin //location// 
 		delete parkings			--del_park.php			//		delete the parking from all database table values
-_____________________--------------------------------------------------------------------------------------_________________________________	
-                                             This is working perfectly
